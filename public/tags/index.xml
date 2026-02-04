@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blowfish</title>
-    <link>http://localhost:63930/tags/</link>
+    <link>http://localhost:51841/tags/</link>
     <description>Recent content in Tags on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2026 </copyright>
-    <atom:link href="http://localhost:63930/tags/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
+    <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
+    <copyright>© 2026 Jesper Andersen</copyright>
+    <atom:link href="http://localhost:51841/tags/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
