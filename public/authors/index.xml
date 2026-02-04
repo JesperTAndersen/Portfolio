@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>http://localhost:1313/authors/</link>
+    <link>http://localhost:1313/Portfolio/authors/</link>
     <description>Recent content in Authors on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Portfolio/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
