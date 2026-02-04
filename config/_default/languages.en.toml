@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Blowfish"
+title = "Jesper Andersen - Blog & DevLog"
 
 [params]
   displayName = "EN"
@@ -19,12 +19,10 @@ title = "Blowfish"
    email = "cph-ja472@stud.ek.dk"
    image = "img/githubIcon.png"
    imageQuality = 96
-   headline = "I'm only human"
+   headline = "Mostly Coding"
    bio = "A little bit about you"
    links = [
-    { github = "https://github.com/JesperTAndersen" }
-   ]
-#     { email = "mailto:hello@your_domain.com" },
+     { email = "mailto:cph-ja472@stud.ek.dk" },
 #     { link = "https://link-to-some-website.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
@@ -37,7 +35,7 @@ title = "Blowfish"
 #     { facebook = "https://facebook.com/username" },
 #     { flickr = "https://www.flickr.com/photos/username/" },
 #     { foursquare = "https://foursquare.com/username" },
-#     ,
+     { github = "https://github.com/JesperTAndersen" },
 #     { gitlab = "https://gitlab.com/username" },
 #     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },
@@ -75,4 +73,4 @@ title = "Blowfish"
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
 #     { codeberg = "https://codeberg.org/username"},
-#   ]
+   ]
