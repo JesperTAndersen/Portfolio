@@ -12,32 +12,32 @@
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>First Blog</title>
+      <link>http://localhost:1313/Portfolio/posts/0502-2026/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/posts/0502-2026/</guid>
+      <description>&lt;p&gt;First Blog, alot of testing going on with this template&amp;hellip; nothing is set in stone for how it looks, but lets see where we end up when were done.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Maintenance Log - First Week</title>
       <link>http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
       <guid>http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/</guid>
-      <description></description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;And so it begins&#xD;&#xA;    &lt;div id=&#34;and-so-it-begins&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#and-so-it-begins&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Tekst incomming&lt;/p&gt;</description>
       
     </item>
     
     <item>
-      <title>Test Oplæg 2</title>
-      <link>http://localhost:1313/Portfolio/posts/testpost-copy/</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>http://localhost:1313/Portfolio/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/posts/testpost-copy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Test Oplæg</title>
-      <link>http://localhost:1313/Portfolio/posts/testpost/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/posts/testpost/</guid>
-      <description></description>
+      <guid>http://localhost:1313/Portfolio/aboutme/</guid>
+      <description>&lt;p&gt;Her kommer der en About me sektion&lt;/p&gt;</description>
       
     </item>
     

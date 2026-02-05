@@ -12,22 +12,12 @@
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Test Oplæg 2</title>
-      <link>http://localhost:1313/Portfolio/posts/testpost-copy/</link>
+      <title>First Blog</title>
+      <link>http://localhost:1313/Portfolio/posts/0502-2026/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/posts/testpost-copy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Test Oplæg</title>
-      <link>http://localhost:1313/Portfolio/posts/testpost/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/posts/testpost/</guid>
-      <description></description>
+      <guid>http://localhost:1313/Portfolio/posts/0502-2026/</guid>
+      <description>&lt;p&gt;First Blog, alot of testing going on with this template&amp;hellip; nothing is set in stone for how it looks, but lets see where we end up when were done.&lt;/p&gt;</description>
       
     </item>
     

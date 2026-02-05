@@ -22,6 +22,26 @@
     </item>
     
     <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/Portfolio/tags/blog/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/blog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>FirstPost</title>
+      <link>http://localhost:1313/Portfolio/tags/firstpost/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/firstpost/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>MaintenanceLog</title>
       <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
@@ -37,36 +57,6 @@
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
       <guid>http://localhost:1313/Portfolio/tags/project/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>http://localhost:1313/Portfolio/tags/blog/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/blog/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>FirstPost</title>
-      <link>http://localhost:1313/Portfolio/tags/firstpost/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/firstpost/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/Portfolio/tags/test/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/test/</guid>
       <description></description>
       
     </item>
