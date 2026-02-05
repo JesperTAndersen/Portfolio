@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jesper Andersen - Blog &amp; DevLog</title>
+    <link>http://localhost:1313/Portfolio/%23about/</link>
+    <description>Recent content on Jesper Andersen - Blog &amp; DevLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
+    <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
+    <copyright>© 2026 Jesper Andersen</copyright>
+    <atom:link href="http://localhost:1313/Portfolio/%23about/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
