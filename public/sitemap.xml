@@ -4,16 +4,42 @@
 
   <url>
     <loc>http://localhost:1313/Portfolio/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/devlog/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/Portfolio/posts/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/posts/testpost-copy/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/Portfolio/posts/testpost/</loc>
+    <lastmod>2026-02-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/aboutme/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
