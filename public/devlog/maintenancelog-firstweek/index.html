@@ -22,7 +22,7 @@
   
   
   
-    <meta name="keywords" content="Project,3Sem,MaintenanceLog,">
+    <meta name="keywords" content="Devlog,Project,3Sem,MaintenanceLog,">
   
   
   
@@ -52,12 +52,13 @@
   <meta property="og:site_name" content="Jesper Andersen - Blog & DevLog">
   <meta property="og:title" content="Maintenance Log - First Week">
   <meta property="og:description" content="So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:
-Maintenance Log Backend#This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.">
+#Maintenance Log Backend#This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="devlog">
     <meta property="article:published_time" content="2026-02-06T00:00:00+00:00">
     <meta property="article:modified_time" content="2026-02-06T00:00:00+00:00">
+    <meta property="article:tag" content="Devlog">
     <meta property="article:tag" content="Project">
     <meta property="article:tag" content="3Sem">
     <meta property="article:tag" content="MaintenanceLog">
@@ -66,7 +67,7 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Maintenance Log - First Week">
   <meta name="twitter:description" content="So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:
-Maintenance Log Backend#This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.">
+#Maintenance Log Backend#This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.">
 
   
   
@@ -1310,10 +1311,10 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
     
     "dateModified": "2026-02-06T00:00:00\u002b00:00",
     
-    "keywords": ["Project","3Sem","MaintenanceLog"],
+    "keywords": ["Devlog","Project","3Sem","MaintenanceLog"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "850"
+    "wordCount": "849"
   }]
   </script>
 
@@ -1419,7 +1420,7 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
       
       class="flex items-center bf-icon-color-hover"
       aria-label="About"
-      title="About">
+      title="About me">
       
       
         <span class="text-base font-medium break-normal">
@@ -1564,7 +1565,7 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="About" class="text-2xl font-bold tracking-tight">
+        <span title="About me" class="text-2xl font-bold tracking-tight">
           About
         </span>
         
@@ -1664,7 +1665,7 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-06T00:00:00&#43;00:00">6 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>850 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-02-06T00:00:00&#43;00:00">6 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>849 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -1687,6 +1688,16 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
       
         
           
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/devlog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devlog
+  </span>
+</span>
+
+              </a>
             
               <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/project/">
                 <span class="flex cursor-pointer">
@@ -1838,6 +1849,15 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
         <div class="article-content max-w-prose mb-20">
           <p>So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:</p>
 
+<h2 class="relative group">
+    <div id="hahahugoshortcode8s0hbhb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hahahugoshortcode8s0hbhb" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 
 <h1 class="relative group">Maintenance Log Backend
     <div id="maintenance-log-backend" class="anchor"></div>
@@ -1902,7 +1922,7 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
     </span>
     
 </h3>
-<p>So this weeks focus was to get hibernate integrated into the project and understand how the different annotations works and what they do. I started with by defining what entities my project should have and how my structure should looks like going forward. I started by defining a quick class diagram in a plantUML diagram</p>
+<p>So this weeks focus was to get hibernate integrated into the project and understand how the different annotations works and what they do. I started by defining what entities my project should have and how my structure should looks like going forward. I started by sketching a quick class diagram in a plantUML.</p>
 
 <figure>
         <img
@@ -1932,10 +1952,10 @@ Maintenance Log Backend#This project is a backend API for managing maintenance
           alt="classDiagram2"
           width="1009"
           height="851"
-          src="/Portfolio/img/MLCDV2_hu_5c6a4589d99d2135.png"
-          srcset="/Portfolio/img/MLCDV2_hu_5c6a4589d99d2135.png 800w,/Portfolio/img/MLCDV2_hu_a9762b3b8dd6fe0a.png 1280w"
+          src="/Portfolio/img/MLCDv2_hu_5c6a4589d99d2135.png"
+          srcset="/Portfolio/img/MLCDv2_hu_5c6a4589d99d2135.png 800w,/Portfolio/img/MLCDv2_hu_a9762b3b8dd6fe0a.png 1280w"
           sizes="(min-width: 768px) 50vw, 65vw"
-          data-zoom-src="/Portfolio/img/MLCDV2.png"
+          data-zoom-src="/Portfolio/img/MLCDv2.png"
         />
   
   

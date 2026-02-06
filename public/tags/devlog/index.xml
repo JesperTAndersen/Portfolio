@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3Sem on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>http://localhost:1313/Portfolio/tags/3sem/</link>
-    <description>Recent content in 3Sem on Jesper Andersen - Blog &amp; DevLog</description>
+    <title>Devlog on Jesper Andersen - Blog &amp; DevLog</title>
+    <link>http://localhost:1313/Portfolio/tags/devlog/</link>
+    <description>Recent content in Devlog on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/3sem/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/devlog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Maintenance Log - First Week</title>

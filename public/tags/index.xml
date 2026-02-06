@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Devlog</title>
+      <link>http://localhost:1313/Portfolio/tags/devlog/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/devlog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>MaintenanceLog</title>
       <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Jesper Andersen - Blog &amp; DevLog</title>
+    <link>http://localhost:1313/Portfolio/tags/ai/</link>
+    <description>Recent content in AI on Jesper Andersen - Blog &amp; DevLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
+    <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
+    <copyright>© 2026 Jesper Andersen</copyright>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AI and how i use it</title>
+      <link>http://localhost:1313/Portfolio/posts/06-07-2026-ai-my-use/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/posts/06-07-2026-ai-my-use/</guid>
+      <description>&lt;p&gt;Alrighty, lets try to actually get a real &amp;ldquo;first&amp;rdquo; blogpost going for this site.&lt;/p&gt;&#xA;&lt;p&gt;For today topic i wanted to adress a little bit about my personal use of AI, briefly what my opinion is on the doomsday talk about it taking our jobs and how i use it day-to-day as a new programmer in a field where everything apparently is changing how it gets done just as i get into it.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
