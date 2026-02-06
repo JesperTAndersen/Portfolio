@@ -8,6 +8,7 @@ draft: false
 So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:
 
 {{< github repo="JesperTAndersen/MaintenanceLog" showThumbnail=true >}}
+----
 
 # Maintenance Log Backend
 
@@ -47,7 +48,7 @@ So this weeks focus was to get hibernate integrated into the project and underst
 after that i got to work on actually creating relations (or trying since i dont actually know if theses work yet), and creating a some DAO classes for MaintenanceLog and User. The final result after todays work looked like this:
 
 {{< figure
-    src="img/MLCDV2.png"
+    src="img/MLCDv2.png"
     alt="classDiagram2"
     >}}
     
