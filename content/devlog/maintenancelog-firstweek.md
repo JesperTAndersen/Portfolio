@@ -38,7 +38,7 @@ The goal of this project is to build a production-ready backend system that demo
 So after that piece of business pitch, lets go into what actually happened this week:
 
 ### The Project & Hibernate
-So this weeks focus was to get hibernate integrated into the project and understand how the different annotations works and what they do. I started with by defining what entities my project should have and how my structure should looks like going forward. I started by defining a quick class diagram in a plantUML diagram
+So this weeks focus was to get hibernate integrated into the project and understand how the different annotations works and what they do. I started by defining what entities my project should have and how my structure should looks like going forward. I started by sketching a quick class diagram in a plantUML.
 
 {{< figure
     src="img/MLCDV1.png"
