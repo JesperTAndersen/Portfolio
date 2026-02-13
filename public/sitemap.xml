@@ -3,19 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/Portfolio/posts/06-07-2026-ai-my-use/</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/Portfolio/devlog/</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/Portfolio/</loc>
+    <lastmod>2026-02-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/devlog/maintenancelog-secondweek/</loc>
+    <lastmod>2026-02-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/posts/06-07-2026-ai-my-use/</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

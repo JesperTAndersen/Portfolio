@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MaintenanceLog on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
-    <description>Recent content in MaintenanceLog on Jesper Andersen - Blog &amp; DevLog</description>
+    <title>Maintenance Log on Jesper Andersen - Blog &amp; DevLog</title>
+    <link>http://localhost:1313/Portfolio/series/maintenance-log/</link>
+    <description>Recent content in Maintenance Log on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/maintenancelog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/series/maintenance-log/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Maintenance Log - Second Week</title>

@@ -219,10 +219,10 @@
       "name": "Jesper Andersen"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-02-06T00:00:00\u002b00:00",
-    "datePublished": "2026-02-06T00:00:00\u002b00:00",
+    "dateCreated": "2026-02-13T00:00:00\u002b00:00",
+    "datePublished": "2026-02-13T00:00:00\u002b00:00",
     
-    "dateModified": "2026-02-06T00:00:00\u002b00:00",
+    "dateModified": "2026-02-13T00:00:00\u002b00:00",
     
     
     
@@ -625,11 +625,11 @@
     <header class="items-center text-start text-xl font-semibold">
       <a
         
-          href="/Portfolio/devlog/maintenancelog-firstweek/"
+          href="/Portfolio/devlog/maintenancelog-secondweek/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
         <h2>
-          Maintenance Log - First Week
+          Maintenance Log - Second Week
           
         </h2>
       </a>
@@ -683,7 +683,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-06T00:00:00&#43;00:00">6 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>849 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-02-13T00:00:00&#43;00:00">13 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1590 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
     
 
     
@@ -761,7 +761,208 @@
     </div>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:
+        So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s continue into this week&rsquo;s additions.#Relations, DAOs and exception handling#This week&rsquo;s primary goal was to get the necessary relations between my entities up and running, begin to finalize the DAOs for each, and integrate interfaces both for simple CRUD and for specific queries across the board. After that, the project looked a bit like this:
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+          
+            
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/Portfolio/devlog/maintenancelog-firstweek/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Maintenance Log - First Week
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-02-06T00:00:00&#43;00:00">6 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>819 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/devlog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devlog
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/project/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Project
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/3sem/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    3Sem
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/maintenancelog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    MaintenanceLog
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        So, first of all, welcome to this first week post of the development of my little maintenance log. Just for posterity, let&rsquo;s start with what is in my README for the project, since that actually breaks down what it is:
 #Maintenance Log Backend#This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.
 
       </div>

@@ -9,14 +9,44 @@
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>3Sem</title>
       <link>http://localhost:1313/Portfolio/tags/3sem/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
       <guid>http://localhost:1313/Portfolio/tags/3sem/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Devlog</title>
+      <link>http://localhost:1313/Portfolio/tags/devlog/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/devlog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>MaintenanceLog</title>
+      <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/maintenancelog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>http://localhost:1313/Portfolio/tags/project/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>http://localhost:1313/Portfolio/tags/project/</guid>
       <description></description>
       
     </item>
@@ -37,36 +67,6 @@
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
       <guid>http://localhost:1313/Portfolio/tags/blog/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Devlog</title>
-      <link>http://localhost:1313/Portfolio/tags/devlog/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/devlog/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>MaintenanceLog</title>
-      <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/maintenancelog/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Project</title>
-      <link>http://localhost:1313/Portfolio/tags/project/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/project/</guid>
       <description></description>
       
     </item>

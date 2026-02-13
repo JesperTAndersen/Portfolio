@@ -1,11 +1,12 @@
 ---
 title: "Maintenance Log - First Week"
 tags: ["Devlog", "Project", "3Sem","MaintenanceLog"]
+series: ["Maintenance Log"]
 date: 2026-02-06
 draft: false
 ---
 
-So first of all welcome to this first week post of the development of my little maintenance log, just for posterity lets start with what is in my readme for the project, since that actually breaks down what it its:
+So, first of all, welcome to this first week post of the development of my little maintenance log. Just for posterity, let's start with what is in my README for the project, since that actually breaks down what it is:
 
 {{< github repo="JesperTAndersen/MaintenanceLog" showThumbnail=true >}}
 ----
@@ -38,14 +39,14 @@ The goal of this project is to build a production-ready backend system that demo
 So after that piece of business pitch, lets go into what actually happened this week:
 
 ### The Project & Hibernate
-So this weeks focus was to get hibernate integrated into the project and understand how the different annotations works and what they do. I started by defining what entities my project should have and how my structure should looks like going forward. I started by sketching a quick class diagram in a plantUML.
+This week's focus was to get Hibernate integrated into the project and understand how the different annotations work and what they do. I started by defining which entities my project should have and how my structure should look going forward. I started by sketching a quick class diagram in PlantUML.
 
 {{< figure
     src="img/MLCDV1.png"
     alt="classDiagram"
     >}}
 
-after that i got to work on actually creating relations (or trying since i dont actually know if theses work yet), and creating a some DAO classes for MaintenanceLog and User. The final result after todays work looked like this:
+And finally a quick rundown of my current design decisions:
 
 {{< figure
     src="img/MLCDv2.png"
@@ -154,4 +155,4 @@ and finally a quick rundown of my current design decisions:
 ---
 
 ### Portfolio Site
-Finally to end this "little" entry for the week, i think actually talking a little about this hugo/blowfish template thing is in its place. Is has been a fun little side thing to get up and running and i looks forward to tinkering with the different settings and find out how everything actually operates as i go further along. Im doubtful if i will use this for other things than a Dev Log atm. but maybe i should start my new life as a Bread Blogger aswell. I just think there is too much sourdough in the world already, and i think i get only a short runway on throwing up pictures of my normal yeast bread.
+Finally, to end this "little" entry for the week, I think actually talking a little about this Hugo/Blowfish template thing is in its place. It has been a fun little side thing to get up and running, and I look forward to tinkering with the different settings and finding out how everything actually operates as I go further along. I'm doubtful if I will use this for other things than a dev log at the moment, but maybe I should start my new life as a bread blogger as well. I just think there is too much sourdough in the world already, and I think I only get a short runway on throwing up pictures of my normal yeast bread.
