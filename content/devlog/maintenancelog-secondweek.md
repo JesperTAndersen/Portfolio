@@ -5,7 +5,7 @@ series: ["Maintenance Log"]
 date: 2026-02-13
 draft: false
 ---
-**Part 2 of the “Maintenance Log” series.**
+
 So, welcome to this second entry of my Devlog. Without further ado, let's continue into this week's additions.
 
 ### Relations, DAOs and exception handling
