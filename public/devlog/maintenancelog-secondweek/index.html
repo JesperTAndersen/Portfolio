@@ -51,7 +51,7 @@
   <meta property="og:url" content="http://localhost:1313/Portfolio/devlog/maintenancelog-secondweek/">
   <meta property="og:site_name" content="Jesper Andersen - Blog & DevLog">
   <meta property="og:title" content="Maintenance Log - Second Week">
-  <meta property="og:description" content="Part 2 of the “Maintenance Log” series. So, welcome to this second entry of my Devlog. Without further ado, let’s continue into this week’s additions.
+  <meta property="og:description" content="So, welcome to this second entry of my Devlog. Without further ado, let’s continue into this week’s additions.
 Relations, DAOs and exception handling#This week’s primary goal was to get the necessary relations between my entities up and running, begin to finalize the DAOs for each, and integrate interfaces both for simple CRUD and for specific queries across the board. After that, the project looked a bit like this:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -67,7 +67,7 @@ Relations, DAOs and exception handling#This week’s primary goal was to get t
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Maintenance Log - Second Week">
-  <meta name="twitter:description" content="Part 2 of the “Maintenance Log” series. So, welcome to this second entry of my Devlog. Without further ado, let’s continue into this week’s additions.
+  <meta name="twitter:description" content="So, welcome to this second entry of my Devlog. Without further ado, let’s continue into this week’s additions.
 Relations, DAOs and exception handling#This week’s primary goal was to get the necessary relations between my entities up and running, begin to finalize the DAOs for each, and integrate interfaces both for simple CRUD and for specific queries across the board. After that, the project looked a bit like this:">
 
   
@@ -115,8 +115,8 @@ Relations, DAOs and exception handling#This week’s primary goal was to get t
   <link
     type="text/css"
     rel="stylesheet"
-    href="/Portfolio/css/main.bundle.min.743232ae1cfd835c8857bb49e923cf1a7009aac881405cd51f4b480078c7b218601d52449358c7ab17b76d78bd7c9daff70cdcf37cefae28cb53b3707a236922.css"
-    integrity="sha512-dDIyrhz9g1yIV7tJ6SPPGnAJqsiBQFzVH0tIAHjHshhgHVJEk1jHqxe3bXi9fJ2v9wzc83zvrijLU7NweiNpIg==">
+    href="/Portfolio/css/main.bundle.min.c3f022e9c02b5d0fc4f1999c1d0dba4ce6f8a99bcc6ced7b250ff06068f982a487c888c4c35f5d35bd2947f86fced108f7696390f2201e7fd79c435954939c5d.css"
+    integrity="sha512-w/Ai6cArXQ/E8ZmcHQ26TOb4qZvMbO17JQ/wYGj5gqSHyIjEw19dNb0pR/hvztEI92ljkPIgHn/XnENZVJOcXQ==">
 
   
   
@@ -238,7 +238,7 @@ Relations, DAOs and exception handling#This week’s primary goal was to get t
     "keywords": ["Devlog","Project","3Sem","MaintenanceLog"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1695"
+    "wordCount": "2117"
   }]
   </script>
 
@@ -589,7 +589,7 @@ Relations, DAOs and exception handling#This week’s primary goal was to get t
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-13T00:00:00&#43;00:00">13 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1695 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+      <time datetime="2026-02-13T00:00:00&#43;00:00">13 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2117 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
     
 
     
@@ -804,8 +804,7 @@ Relations, DAOs and exception handling#This week’s primary goal was to get t
 
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>Part 2 of the “Maintenance Log” series.</strong>
-So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s continue into this week&rsquo;s additions.</p>
+          <p>So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s continue into this week&rsquo;s additions.</p>
 
 <h3 class="relative group">Relations, DAOs and exception handling
     <div id="relations-daos-and-exception-handling" class="anchor"></div>
@@ -836,7 +835,7 @@ So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s 
   
   </figure>
 <p>After that I began to add exception handling across my different CRUD operations. I made the design choice of adding my own custom <code>DatabaseException</code> class with some error types I can relate to common HTTP error codes, both to keep low coupling between layers and to have the correlation I need when I start to use <code>APIException</code> in the service layer to interpret <code>DatabaseException</code>s. For reference, I have thrown in my current custom exception, the error type enum and an example of how it&rsquo;s used in the code:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w">
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">CONSTRAINT_VIOLATION</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="c1">// 409</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">NOT_FOUND</span><span class="p">,</span><span class="w"> </span><span class="c1">// 404</span><span class="w">
@@ -845,15 +844,15 @@ So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">QUERY_FAILURE</span><span class="p">,</span><span class="w"> </span><span class="c1">// 500</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">UNKNOWN</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RuntimeException</span><span class="w"> </span><span class="p">{</span><span class="w">
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RuntimeException</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w"> </span><span class="n">errorType</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DatabaseException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w">  </span><span class="n">errorType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DatabaseException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w"> </span><span class="n">errorType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">errorType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">errorType</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DatabaseException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w">  </span><span class="n">errorType</span><span class="p">,</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DatabaseException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="w"> </span><span class="n">errorType</span><span class="p">,</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">cause</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">errorType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">errorType</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
@@ -862,51 +861,85 @@ So, welcome to this second entry of my Devlog. Without further ado, let&rsquo;s 
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">errorType</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w">
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="na">getUserId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="na">getUserId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&#34;User and user id are required&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&#34;User and user id are required&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emf</span><span class="p">.</span><span class="na">createEntityManager</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">begin</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emf</span><span class="p">.</span><span class="na">createEntityManager</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">begin</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">try</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">User</span><span class="w"> </span><span class="n">merged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">em</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">commit</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">merged</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;User not found or invalid&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">NOT_FOUND</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">PersistenceException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;Update User failed&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">TRANSACTION_FAILURE</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;Update User failed&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">UNKNOWN</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">User</span><span class="w"> </span><span class="n">merged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">em</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">commit</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">merged</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span></span></span></code></pre></div></div>
-<p>I think that includes the overhead of what happened this week. Next up is integration testing for all my DAOs.</p>
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;User not found or invalid&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">NOT_FOUND</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">PersistenceException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;Update User failed&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">TRANSACTION_FAILURE</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">isActive</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">().</span><span class="na">rollback</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseException</span><span class="p">(</span><span class="s">&#34;Update User failed&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">DatabaseErrorType</span><span class="p">.</span><span class="na">UNKNOWN</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Who needs to know about whom?
+    <div id="who-needs-to-know-about-whom" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#who-needs-to-know-about-whom" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>One of the more interesting design decisions I had while working on the project this week was about relationships — specifically, which entities in my domain model need to <em>know about</em> each other, and which ones don&rsquo;t.</p>
+<p>It sounds obvious when you say it out loud, but it&rsquo;s one of those things that&rsquo;s easy to just&hellip; not think about, and then end up with a bloated model where everything points to everything else for no good reason.</p>
+<p><strong>Asset ↔ MaintenanceLog (Bidirectional)</strong></p>
+<p>This one was a clear yes for bidirectional. An asset <em>needs</em> to know about its logs because the whole point of the system is reviewing an asset&rsquo;s maintenance history. You land on an asset, and you expect to see its logs right there.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Asset side</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@OneToMany</span><span class="p">(</span><span class="n">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FetchType</span><span class="p">.</span><span class="na">LAZY</span><span class="p">,</span><span class="w"> </span><span class="n">mappedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;asset&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@OrderBy</span><span class="p">(</span><span class="s">&#34;performedDate DESC&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">MaintenanceLog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// MaintenanceLog side (owning side)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ManyToOne</span><span class="p">(</span><span class="n">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FetchType</span><span class="p">.</span><span class="na">LAZY</span><span class="p">,</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;asset_id&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Asset</span><span class="w"> </span><span class="n">asset</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>The <code>MaintenanceLog</code> owns the relationship (it holds the foreign key), but <code>Asset</code> can still navigate to its logs. The <code>@OrderBy</code> annotation means they always come back newest first, without me having to sort anything manually.</p>
+<p><strong>MaintenanceLog → User (Unidirectional)</strong></p>
+<p>This one was a deliberate choice to <em>not</em> go bidirectional. A log needs to know who performed it — that&rsquo;s just part of the audit trail. But does a <code>User</code> need a list of all the logs they&rsquo;ve ever written?</p>
+<p>In practice, no — at least not in the way this system works. If you want logs by a specific user, you go through the <code>MaintenanceLogDAO</code> and query directly. You don&rsquo;t navigate there through the <code>User</code> entity. Keeping it unidirectional keeps <code>User</code> clean and focused.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// MaintenanceLog side only — User has no collection of logs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ManyToOne</span><span class="p">(</span><span class="n">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FetchType</span><span class="p">.</span><span class="na">LAZY</span><span class="p">,</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@JoinColumn</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;performed_by_user_id&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">User</span><span class="w"> </span><span class="n">performedBy</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>The question I found most useful to ask myself throughout all of this was: <em>&ldquo;Will I ever need to navigate this relationship from the other direction in a realistic use case?&rdquo;</em></p>
+<p>Not &ldquo;could I imagine a scenario where&hellip;&rdquo;, but actually, in the flow of this application, does it make sense? For assets and logs: yes, absolutely. For users and logs: no, you query for that directly.</p>
+<p>It&rsquo;s a small thing, but keeping relationships unidirectional where possible means less to maintain, less risk of accidentally triggering lazy loading where you don&rsquo;t want it, and a domain model that actually reflects how the system gets used — rather than just how it <em>could</em> be used in some hypothetical future.</p>
+<p>Anyway, small win for thinking before just annotating everything with <code>@OneToMany</code> and calling it a day.</p>
 <p>And finally a quick rundown of my current design decisions:</p>
 
 <h3 class="relative group">Maintenance Log - Design Decisions (Updated)

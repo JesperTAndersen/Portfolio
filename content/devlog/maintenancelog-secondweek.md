@@ -18,7 +18,7 @@ This week's primary goal was to get the necessary relations between my entities 
 
 After that I began to add exception handling across my different CRUD operations. I made the design choice of adding my own custom `DatabaseException` class with some error types I can relate to common HTTP error codes, both to keep low coupling between layers and to have the correlation I need when I start to use `APIException` in the service layer to interpret `DatabaseException`s. For reference, I have thrown in my current custom exception, the error type enum and an example of how it's used in the code:
 
-```Java
+```java
 public enum DatabaseErrorType
 {
     CONSTRAINT_VIOLATION , // 409
@@ -28,19 +28,18 @@ public enum DatabaseErrorType
     QUERY_FAILURE, // 500
     UNKNOWN
 }
-
 ```
 
-```Java
+```java
 public class DatabaseException extends RuntimeException {
     private final DatabaseErrorType errorType;
 
-    public DatabaseException(String message, DatabaseErrorType  errorType) {
+    public DatabaseException(String message, DatabaseErrorType errorType) {
         super(message);
         this.errorType = errorType;
     }
 
-    public DatabaseException(String message, DatabaseErrorType  errorType, Throwable cause) {
+    public DatabaseException(String message, DatabaseErrorType errorType, Throwable cause) {
         super(message, cause);
         this.errorType = errorType;
     }
@@ -49,57 +48,99 @@ public class DatabaseException extends RuntimeException {
         return errorType;
     }
 }
-
 ```
 
 ```java
-    @Override
-    public User update(User u)
+@Override
+public User update(User u)
+{
+    if (u == null || u.getUserId() == null)
     {
-        if (u == null || u.getUserId() == null)
+        throw new IllegalArgumentException("User and user id are required");
+    }
+
+    try (EntityManager em = emf.createEntityManager())
+    {
+        em.getTransaction().begin();
+
+        try
         {
-            throw new IllegalArgumentException("User and user id are required");
+            User merged = em.merge(u);
+            em.getTransaction().commit();
+            return merged;
         }
-
-        try (EntityManager em = emf.createEntityManager())
+        catch (IllegalArgumentException e)
         {
-            em.getTransaction().begin();
-
-            try
+            if (em.getTransaction().isActive())
             {
-                User merged = em.merge(u);
-                em.getTransaction().commit();
-                return merged;
+                em.getTransaction().rollback();
             }
-            catch (IllegalArgumentException e)
+            throw new DatabaseException("User not found or invalid", DatabaseErrorType.NOT_FOUND, e);
+        }
+        catch (PersistenceException e)
+        {
+            if (em.getTransaction().isActive())
             {
-                if (em.getTransaction().isActive())
-                {
-                    em.getTransaction().rollback();
-                }
-                throw new DatabaseException("User not found or invalid", DatabaseErrorType.NOT_FOUND, e);
+                em.getTransaction().rollback();
             }
-            catch (PersistenceException e)
+            throw new DatabaseException("Update User failed", DatabaseErrorType.TRANSACTION_FAILURE, e);
+        }
+        catch (RuntimeException e)
+        {
+            if (em.getTransaction().isActive())
             {
-                if (em.getTransaction().isActive())
-                {
-                    em.getTransaction().rollback();
-                }
-                throw new DatabaseException("Update User failed", DatabaseErrorType.TRANSACTION_FAILURE, e);
+                em.getTransaction().rollback();
             }
-            catch (RuntimeException e)
-            {
-                if (em.getTransaction().isActive())
-                {
-                    em.getTransaction().rollback();
-                }
-                throw new DatabaseException("Update User failed", DatabaseErrorType.UNKNOWN, e);
-            }
+            throw new DatabaseException("Update User failed", DatabaseErrorType.UNKNOWN, e);
         }
     }
+}
 ```
 
-I think that includes the overhead of what happened this week. Next up is integration testing for all my DAOs.
+### Who needs to know about whom?
+
+One of the more interesting design decisions I had while working on the project this week was about relationships — specifically, which entities in my domain model need to *know about* each other, and which ones don't.
+
+It sounds obvious when you say it out loud, but it's one of those things that's easy to just... not think about, and then end up with a bloated model where everything points to everything else for no good reason.
+
+**Asset ↔ MaintenanceLog (Bidirectional)**
+
+This one was a clear yes for bidirectional. An asset *needs* to know about its logs because the whole point of the system is reviewing an asset's maintenance history. You land on an asset, and you expect to see its logs right there.
+
+```java
+// Asset side
+@OneToMany(fetch = FetchType.LAZY, mappedBy = "asset")
+@OrderBy("performedDate DESC")
+private List<MaintenanceLog> logs = new ArrayList<>();
+
+// MaintenanceLog side (owning side)
+@ManyToOne(fetch = FetchType.LAZY, optional = false)
+@JoinColumn(name = "asset_id", nullable = false)
+Asset asset;
+```
+
+The `MaintenanceLog` owns the relationship (it holds the foreign key), but `Asset` can still navigate to its logs. The `@OrderBy` annotation means they always come back newest first, without me having to sort anything manually.
+
+**MaintenanceLog → User (Unidirectional)**
+
+This one was a deliberate choice to *not* go bidirectional. A log needs to know who performed it — that's just part of the audit trail. But does a `User` need a list of all the logs they've ever written?
+
+In practice, no — at least not in the way this system works. If you want logs by a specific user, you go through the `MaintenanceLogDAO` and query directly. You don't navigate there through the `User` entity. Keeping it unidirectional keeps `User` clean and focused.
+
+```java
+// MaintenanceLog side only — User has no collection of logs
+@ManyToOne(fetch = FetchType.LAZY, optional = false)
+@JoinColumn(name = "performed_by_user_id", nullable = false)
+User performedBy;
+```
+
+The question I found most useful to ask myself throughout all of this was: *"Will I ever need to navigate this relationship from the other direction in a realistic use case?"*
+
+Not "could I imagine a scenario where...", but actually, in the flow of this application, does it make sense? For assets and logs: yes, absolutely. For users and logs: no, you query for that directly.
+
+It's a small thing, but keeping relationships unidirectional where possible means less to maintain, less risk of accidentally triggering lazy loading where you don't want it, and a domain model that actually reflects how the system gets used — rather than just how it *could* be used in some hypothetical future.
+
+Anyway, small win for thinking before just annotating everything with `@OneToMany` and calling it a day.
 
 And finally a quick rundown of my current design decisions:
 

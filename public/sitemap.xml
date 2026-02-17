@@ -45,6 +45,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/Portfolio/devlog/draft/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/Portfolio/aboutme/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
