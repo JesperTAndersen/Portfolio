@@ -15,16 +15,18 @@
 
   
   
-    <title> &middot; Jesper Andersen - Blog & DevLog</title>
-    <meta name="title" content=" &middot; Jesper Andersen - Blog & DevLog">
+    <title>Maintenance Log - Third Week &middot; Jesper Andersen - Blog & DevLog</title>
+    <meta name="title" content="Maintenance Log - Third Week &middot; Jesper Andersen - Blog & DevLog">
   
 
   
   
   
+    <meta name="keywords" content="Devlog,Project,3Sem,MaintenanceLog,API,">
   
   
-  <link rel="canonical" href="http://localhost:1313/Portfolio/devlog/draft/">
+  
+  <link rel="canonical" href="http://localhost:1313/Portfolio/devlog/maintenancelog-thirdweek/">
   
 
   
@@ -46,20 +48,27 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/Portfolio/devlog/draft/">
+  <meta property="og:url" content="http://localhost:1313/Portfolio/devlog/maintenancelog-thirdweek/">
   <meta property="og:site_name" content="Jesper Andersen - Blog & DevLog">
-  <meta property="og:title" content="Jesper Andersen - Blog & DevLog">
-  <meta property="og:description" content="Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I have now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow. So without further ado:
-Choosing the Right API for Testing#So choosing an API was actually the first hurdle I had to overcome. My core issue was mostly that from a design standpoint and for the primary use case, I didn’t actually need any external information, so I looked a bit online and found this nifty little API that can provide some random user information to use for a project. My main goal was to have some data I could enter and use in my database instead of generic “User1”, “User2” etc., but also to not have to write all these guys myself. I also have the added benefit of being able to fix the data output by making the seed fixed, so I can use the data for testing, making sure I get the same each time. This also gives me users I can log in to later by actually digging out the passwords again before they were hashed (obviously this is for testing and not real production).">
+  <meta property="og:title" content="Maintenance Log - Third Week">
+  <meta property="og:description" content="Devlog Week 3: External API Integration &amp; Concurrent Processing#Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I’ve now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow — so, without further ado:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="devlog">
+    <meta property="article:published_time" content="2026-02-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-26T00:00:00+00:00">
+    <meta property="article:tag" content="Devlog">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="3Sem">
+    <meta property="article:tag" content="MaintenanceLog">
+    <meta property="article:tag" content="API">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-secondweek/">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Jesper Andersen - Blog & DevLog">
-  <meta name="twitter:description" content="Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I have now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow. So without further ado:
-Choosing the Right API for Testing#So choosing an API was actually the first hurdle I had to overcome. My core issue was mostly that from a design standpoint and for the primary use case, I didn’t actually need any external information, so I looked a bit online and found this nifty little API that can provide some random user information to use for a project. My main goal was to have some data I could enter and use in my database instead of generic “User1”, “User2” etc., but also to not have to write all these guys myself. I also have the added benefit of being able to fix the data output by making the seed fixed, so I can use the data for testing, making sure I get the same each time. This also gives me users I can log in to later by actually digging out the passwords again before they were hashed (obviously this is for testing and not real production).">
+  <meta name="twitter:title" content="Maintenance Log - Third Week">
+  <meta name="twitter:description" content="Devlog Week 3: External API Integration &amp; Concurrent Processing#Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I’ve now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow — so, without further ado:">
 
   
   
@@ -211,25 +220,25 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Devlogs",
-    "name": "",
-    "headline": "",
+    "name": "Maintenance Log - Third Week",
+    "headline": "Maintenance Log - Third Week",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/Portfolio/devlog/draft/",
+    "url" : "http://localhost:1313/Portfolio/devlog/maintenancelog-thirdweek/",
     "author" : {
       "@type": "Person",
       "name": "Jesper Andersen"
     },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-02-26T00:00:00\u002b00:00",
+    "datePublished": "2026-02-26T00:00:00\u002b00:00",
     
+    "dateModified": "2026-02-26T00:00:00\u002b00:00",
     
-    
-    
-    
-    
-    
+    "keywords": ["Devlog","Project","3Sem","MaintenanceLog","API"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2102"
+    "wordCount": "2356"
   }]
   </script>
 
@@ -528,7 +537,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        
+        Maintenance Log - Third Week
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -580,7 +589,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>2102 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="2026-02-26T00:00:00&#43;00:00">26 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2356 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
     
 
     
@@ -602,6 +611,58 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         
       
         
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/devlog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devlog
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/project/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Project
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/3sem/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    3Sem
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/maintenancelog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    MaintenanceLog
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/api/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    API
+  </span>
+</span>
+
+              </a>
+            
           
         
       
@@ -718,9 +779,62 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Maintenance Log -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part :
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-secondweek/">
+          Part :
+          Maintenance Log - Second Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-firstweek/">
+          Part :
+          Maintenance Log - First Week
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
 
         <div class="article-content max-w-prose mb-20">
-          <p>Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I have now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow. So without further ado:</p>
+          
+<h1 class="relative group">Devlog Week 3: External API Integration &amp; Concurrent Processing
+    <div id="devlog-week-3-external-api-integration--concurrent-processing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#devlog-week-3-external-api-integration--concurrent-processing" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Alright, welcome back! After a little bit of a break due to unforeseen circumstances, I&rsquo;ve now continued my work on this little project of mine. The goal this week was to integrate and fetch some data from an external API and use it somehow — so, without further ado:</p>
 <hr>
 
 <h2 class="relative group">Choosing the Right API for Testing
@@ -732,7 +846,9 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
     </span>
     
 </h2>
-<p>So choosing an API was actually the first hurdle I had to overcome. My core issue was mostly that from a design standpoint and for the primary use case, I didn&rsquo;t actually need any external information, so I looked a bit online and found this nifty little API that can provide some random user information to use for a project. My main goal was to have some data I could enter and use in my database instead of generic &ldquo;User1&rdquo;, &ldquo;User2&rdquo; etc., but also to not have to write all these guys myself. I also have the added benefit of being able to fix the data output by making the seed fixed, so I can use the data for testing, making sure I get the same each time. This also gives me users I can log in to later by actually digging out the passwords again before they were hashed (obviously this is for testing and not real production).</p>
+<p>Choosing an API was actually the first hurdle I had to overcome. The core issue was that from a design standpoint (and for the main use case), I didn&rsquo;t actually <em>need</em> any external information — I just wanted realistic seed data.</p>
+<p>So I looked around a bit and found this nifty little API that can generate random user information. The goal was to have data I could enter and use in my database instead of generic &ldquo;User1&rdquo;, &ldquo;User2&rdquo;, etc., but also to not have to hand-write all these guys myself. The added bonus is that I can make the output deterministic by using a fixed seed, which is perfect for testing.</p>
+<p>And yes: it also gives me users I can log in as later by digging out the passwords <em>before</em> they get hashed (obviously only for testing — not real production).</p>
 <p><strong>Key decision:</strong></p>
 <ul>
 <li>API: RandomUser.me</li>
@@ -868,6 +984,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Log and continue — don&#39;t stop the whole process</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>small note: for the moment this is just a print statement, when i set up some logging that will change, but since this is a once only in non-production operation, this works for the moment.</p>
 <p>This way, if one batch fails (network hiccup, bad JSON, whatever), I still get the other 4 batches worth of users. For a one-time seeding operation, partial success is better than complete failure.</p>
 <hr>
 
@@ -1000,17 +1117,86 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <p>The persistence layer is solid, I&rsquo;ve got test data, and I&rsquo;ve demonstrated some concurrency skills. Next up is probably the REST API layer with Javalin — time to actually expose this thing over HTTP and start thinking about authentication and authorization.</p>
 <hr>
 
-<h2 class="relative group">Updated Design Decisions
-    <div id="updated-design-decisions" class="anchor"></div>
+<h2 class="relative group">Appendix: Current folder structure
+    <div id="appendix-current-folder-structure" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#updated-design-decisions" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#appendix-current-folder-structure" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Just for quick context (and so this post has <em>somewhere</em> to point when I mention packages), here&rsquo;s the <em>trimmed</em> version of the project structure. I&rsquo;m only including the stuff that&rsquo;s relevant to this week&rsquo;s work (API integration + services + persistence).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">src/
+</span></span><span class="line"><span class="cl">└─ main/
+</span></span><span class="line"><span class="cl">   ├─ java/
+</span></span><span class="line"><span class="cl">   │  └─ app/
+</span></span><span class="line"><span class="cl">   │     ├─ Main.java
+</span></span><span class="line"><span class="cl">   │     ├─ entities/
+</span></span><span class="line"><span class="cl">   │     │  └─ model/ (Asset, MaintenanceLog, User)
+</span></span><span class="line"><span class="cl">   │     ├─ exceptions/ (ApiException, DatabaseException, DatabaseErrorType)
+</span></span><span class="line"><span class="cl">   │     ├─ integration/
+</span></span><span class="line"><span class="cl">   │     │  ├─ client/ (RandomUserClient)
+</span></span><span class="line"><span class="cl">   │     │  ├─ dto/ (RandomUserDTO)
+</span></span><span class="line"><span class="cl">   │     │  └─ util/ (APIReader)
+</span></span><span class="line"><span class="cl">   │     ├─ persistence/ (Hibernate config + DAOs)
+</span></span><span class="line"><span class="cl">   │     └─ services/ (ApiUserService + implementation)
+</span></span><span class="line"><span class="cl">   └─ resources/ (config.properties, logback.xml)</span></span></code></pre></div></div>
+
+<h2 class="relative group">Maintenance Log - Design Decisions (Updated)
+    <div id="maintenance-log---design-decisions-updated" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#maintenance-log---design-decisions-updated" aria-label="Anchor">#</a>
     </span>
     
 </h2>
 
-<h3 class="relative group">16. API Integration Architecture
+<h4 class="relative group">Updates Since Last Summary
+    <div id="updates-since-last-summary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#updates-since-last-summary" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p><strong>Current state:</strong> Persistence layer is solid, DAOs/services are in place, and I&rsquo;ve now got a repeatable way to seed realistic test users (including a concurrency demo).</p>
+
+<h4 class="relative group">Carried forward (still true)
+    <div id="carried-forward-still-true" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#carried-forward-still-true" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>Before the new API stuff (skip to #16 for those), these are still the rules of the world:</p>
+<ul>
+<li>Maintenance logs are immutable (audit trail)</li>
+<li>Users are soft-deleted (<code>active</code> boolean)</li>
+<li>Assets are immutable except for <code>active</code></li>
+<li>Relationships are intentional (only bidirectional where navigation is actually used)</li>
+<li>Default to <code>LAZY</code> loading; pull related data explicitly when needed</li>
+<li>DAOs are “dumb persistence”; services contain business logic</li>
+<li>Persistence errors are wrapped in custom exceptions (<code>DatabaseException</code> + error type)</li>
+<li><code>TaskType</code> is an enum (not an entity)</li>
+<li>Logs come back newest-first (<code>@OrderBy(&quot;performedDate DESC&quot;)</code>)</li>
+</ul>
+
+<h4 class="relative group">Major Design Changes (This Week)
+    <div id="major-design-changes-this-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#major-design-changes-this-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+
+<h5 class="relative group">16. API Integration Architecture
     <div id="16-api-integration-architecture" class="anchor"></div>
     
     <span
@@ -1018,7 +1204,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-api-integration-architecture" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Generic <code>APIReader</code> + specific client classes</li>
 <li><strong>Implementation:</strong> <code>APIReader</code> handles HTTP/JSON, <code>RandomUserClient</code> handles RandomUser-specific logic</li>
@@ -1026,7 +1212,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <li><strong>Exception handling:</strong> Separate <code>URISyntaxException</code> (programming error) from <code>IOException</code> (runtime error), preserve original exception with cause chaining</li>
 </ul>
 
-<h3 class="relative group">17. Fixed Seed for Test Data
+<h5 class="relative group">17. Fixed Seed for Test Data
     <div id="17-fixed-seed-for-test-data" class="anchor"></div>
     
     <span
@@ -1034,7 +1220,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#17-fixed-seed-for-test-data" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Use fixed seed for seeding, random for demonstrations</li>
 <li><strong>Implementation:</strong> Two endpoint configurations — fixed (<code>seed=myfixedseed123</code>) and random</li>
@@ -1043,7 +1229,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <li><strong>Solution:</strong> Use single-threaded for actual seeding, multi-threaded for performance demo with random data</li>
 </ul>
 
-<h3 class="relative group">18. Password Security
+<h5 class="relative group">18. Password Security
     <div id="18-password-security" class="anchor"></div>
     
     <span
@@ -1051,7 +1237,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#18-password-security" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Hash passwords immediately during entity creation (not after)</li>
 <li><strong>Implementation:</strong> BCrypt with auto-generated salt, hashing happens in DTO → Entity conversion</li>
@@ -1060,7 +1246,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <li><strong>Testing benefit:</strong> Fixed seed means known plain text passwords for testing authentication flow</li>
 </ul>
 
-<h3 class="relative group">19. Concurrent API Fetching
+<h5 class="relative group">19. Concurrent API Fetching
     <div id="19-concurrent-api-fetching" class="anchor"></div>
     
     <span
@@ -1068,7 +1254,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#19-concurrent-api-fetching" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Support both single and multi-threaded fetching via configuration</li>
 <li><strong>Implementation:</strong> ExecutorService with configurable thread count, <code>invokeAll()</code> for batch submission</li>
@@ -1077,7 +1263,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <li><strong>Rationale:</strong> Demonstrates concurrency benefits, graceful degradation on partial failure</li>
 </ul>
 
-<h3 class="relative group">20. Service Layer Responsibilities
+<h5 class="relative group">20. Service Layer Responsibilities
     <div id="20-service-layer-responsibilities" class="anchor"></div>
     
     <span
@@ -1085,7 +1271,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#20-service-layer-responsibilities" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Service layer handles all business logic, DAO remains &ldquo;dumb persistence&rdquo;</li>
 <li><strong>Implementation:</strong>
@@ -1101,7 +1287,7 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
 <li><strong>Rationale:</strong> Clear separation of concerns, testable business logic, DAO can be swapped without affecting logic</li>
 </ul>
 
-<h3 class="relative group">21. DTO Structure for Nested JSON
+<h5 class="relative group">21. DTO Structure for Nested JSON
     <div id="21-dto-structure-for-nested-json" class="anchor"></div>
     
     <span
@@ -1109,17 +1295,15 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-dto-structure-for-nested-json" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h5>
 <ul>
 <li><strong>Decision:</strong> Use nested records that mirror API response structure</li>
 <li><strong>Implementation:</strong> Inner <code>record Name(String first, String last)</code> and <code>record Login(String password)</code></li>
 <li><strong>Attempted approach that failed:</strong> <code>@JsonProperty(&quot;name.first&quot;)</code> — Jackson doesn&rsquo;t support dot notation</li>
 <li><strong>Correct approach:</strong> Nested structures with proper Jackson mapping</li>
 <li><strong>Visibility:</strong> Records must be <code>public</code> (not <code>private</code>) for access from service layer</li>
-<li><strong>Accessor syntax:</strong> Records use field name directly (<code>.first()</code>), not getters (<code>.getFirst()</code>)</li>
 </ul>
 <hr>
-<p>[End note]</p>
 <p>That&rsquo;s it for this week&rsquo;s progress. Solid chunk of work, and I&rsquo;m actually pretty happy with how clean the integration turned out. Next time: making this thing actually respond to HTTP requests.</p>
 
           
@@ -1128,6 +1312,47 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
         </div>
         
         
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Maintenance Log -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part :
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-secondweek/">
+          Part :
+          Maintenance Log - Second Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-firstweek/">
+          Part :
+          Maintenance Log - First Week
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
 
         
 
@@ -1148,8 +1373,8 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
           type="text/javascript"
           src="/Portfolio/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_devlog\draft.md"
-          data-oid-likes="likes_devlog\draft.md"></script>
+          data-oid="views_devlog\maintenancelog-thirdweek.md"
+          data-oid-likes="likes_devlog\maintenancelog-thirdweek.md"></script>
       
     </section>
 
@@ -1165,21 +1390,21 @@ Choosing the Right API for Testing#So choosing an API was actually the first h
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
-        </span>
-        <span class="flex flex-col items-end">
-          
             <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/Portfolio/devlog/maintenancelog-firstweek/">
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/Portfolio/devlog/maintenancelog-secondweek/">
               <span class="leading-6">
-                Maintenance Log - First Week&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Maintenance Log - Second Week
               </span>
             </a>
             
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-02-06T00:00:00&#43;00:00">6 February 2026</time>
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-02-13T00:00:00&#43;00:00">13 February 2026</time>
               </span>
             
+          
+        </span>
+        <span class="flex flex-col items-end">
           
         </span>
       </div>

@@ -2,81 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>http://localhost:1313/Portfolio/tags/</link>
+    <link>https://jespertandersen.github.io/Portfolio/tags/</link>
     <description>Recent content in Tags on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jespertandersen.github.io/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>3Sem</title>
-      <link>http://localhost:1313/Portfolio/tags/3sem/</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <link>https://jespertandersen.github.io/Portfolio/tags/3sem/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/3sem/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/3sem/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>https://jespertandersen.github.io/Portfolio/tags/api/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
+      <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/api/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Devlog</title>
-      <link>http://localhost:1313/Portfolio/tags/devlog/</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <link>https://jespertandersen.github.io/Portfolio/tags/devlog/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/devlog/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/devlog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>MaintenanceLog</title>
-      <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <link>https://jespertandersen.github.io/Portfolio/tags/maintenancelog/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/maintenancelog/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/maintenancelog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Project</title>
-      <link>http://localhost:1313/Portfolio/tags/project/</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <link>https://jespertandersen.github.io/Portfolio/tags/project/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/project/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/project/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/Portfolio/tags/ai/</link>
+      <link>https://jespertandersen.github.io/Portfolio/tags/ai/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/ai/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/ai/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/Portfolio/tags/blog/</link>
+      <link>https://jespertandersen.github.io/Portfolio/tags/blog/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/blog/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/blog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>FirstPost</title>
-      <link>http://localhost:1313/Portfolio/tags/firstpost/</link>
+      <link>https://jespertandersen.github.io/Portfolio/tags/firstpost/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/tags/firstpost/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/tags/firstpost/</guid>
       <description></description>
       
     </item>
