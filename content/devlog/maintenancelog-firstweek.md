@@ -1,17 +1,18 @@
 ---
 title: "Maintenance Log - First Week"
-tags: ["Devlog", "Project", "3Sem","MaintenanceLog"]
+tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Architecture"]
 series: ["Maintenance Log"]
 date: 2026-02-06
 draft: false
 ---
 
+# Devlog Week 1: Project Kickoff & Scope
+
 So, first of all, welcome to this first week post of the development of my little maintenance log. Just for posterity, let's start with what is in my README for the project, since that actually breaks down what it is:
 
 {{< github repo="JesperTAndersen/MaintenanceLog" showThumbnail=true >}}
-----
 
-# Maintenance Log Backend
+## Maintenance Log Backend
 
 This project is a backend API for managing maintenance history of assets such as machines, vehicles, or equipment.
 

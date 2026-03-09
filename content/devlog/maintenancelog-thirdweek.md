@@ -1,6 +1,6 @@
 ---
 title: "Maintenance Log - Third Week"
-tags: ["Devlog", "Project", "3Sem","MaintenanceLog","API"]
+tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "API", "ExternalAPI", "Concurrency", "Seeding"]
 series: ["Maintenance Log"]
 date: 2026-02-26
 draft: false

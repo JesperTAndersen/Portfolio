@@ -1,10 +1,12 @@
 ---
 title: "Maintenance Log - Second Week"
-tags: ["Devlog", "Project", "3Sem","MaintenanceLog"]
+tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Persistence", "DAO", "Hibernate", "JPA"]
 series: ["Maintenance Log"]
 date: 2026-02-13
 draft: false
 ---
+
+# Devlog Week 2: Relations, DAOs & Exception Handling
 
 So, welcome to this second entry of my Devlog. Without further ado, let's continue into this week's additions.
 
