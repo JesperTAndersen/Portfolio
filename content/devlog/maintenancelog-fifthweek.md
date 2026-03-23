@@ -355,7 +355,7 @@ For this project, the simplicity wins. If mapping logic gets complex (multiple D
 
 ## Thoughts on Testing
 
-Writing comprehensive tests highlighted how valuable the layered architecture is. Each layer has clear responsibilities: DAOs worry about persistence, services handle business logic, controllers manage HTTP concerns, mappers structure data. When a test fails, it's immediately obvious which layer has the problem. This clarity is the payoff for all the interface design work.
+Writing tests highlighted how valuable the layered architecture is. Each layer has clear responsibilities: DAOs worry about persistence, services handle business logic, controllers manage HTTP concerns, mappers structure data. When a test fails, it's immediately obvious which layer has the problem. This clarity is the payoff for all the interface design work.
 
 ## Next Week
 

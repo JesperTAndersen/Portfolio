@@ -1,0 +1,1842 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/Portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Portfolio/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Maintenance Log - Sixth Week &middot; Jesper Andersen - Blog & DevLog</title>
+    <meta name="title" content="Maintenance Log - Sixth Week &middot; Jesper Andersen - Blog & DevLog">
+  
+
+  
+  
+  
+    <meta name="keywords" content="Devlog,Project,3Sem,MaintenanceLog,Backend,Security,JWT,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/Portfolio/devlog/maintenancelog-sixthweek/">
+  
+
+  
+  
+    <meta name="author" content="Jesper Andersen">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/JesperTAndersen" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/Portfolio/devlog/maintenancelog-sixthweek/">
+  <meta property="og:site_name" content="Jesper Andersen - Blog & DevLog">
+  <meta property="og:title" content="Maintenance Log - Sixth Week">
+  <meta property="og:description" content="Devlog Week 6: JWT Authentication &amp; Role-Based Authorization#This week was entirely dedicated to building a deployment-ready authentication and authorization system. No new domain features—just securing everything that already exists. The focus was on JWT tokens, role hierarchies, and integrating security seamlessly into the existing architecture without breaking tests or existing functionality.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="devlog">
+    <meta property="article:published_time" content="2026-03-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-23T00:00:00+00:00">
+    <meta property="article:tag" content="Devlog">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="3Sem">
+    <meta property="article:tag" content="MaintenanceLog">
+    <meta property="article:tag" content="Backend">
+    <meta property="article:tag" content="Security">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-fifthweek/">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-fourthweek/">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-thirdweek/">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-secondweek/">
+      <meta property="og:see_also" content="http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Maintenance Log - Sixth Week">
+  <meta name="twitter:description" content="Devlog Week 6: JWT Authentication &amp; Role-Based Authorization#This week was entirely dedicated to building a deployment-ready authentication and authorization system. No new domain features—just securing everything that already exists. The focus was on JWT tokens, role hierarchies, and integrating security seamlessly into the existing architecture without breaking tests or existing functionality.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/Portfolio/css/main.bundle.min.c3f022e9c02b5d0fc4f1999c1d0dba4ce6f8a99bcc6ced7b250ff06068f982a487c888c4c35f5d35bd2947f86fced108f7696390f2201e7fd79c435954939c5d.css"
+    integrity="sha512-w/Ai6cArXQ/E8ZmcHQ26TOb4qZvMbO17JQ/wYGj5gqSHyIjEw19dNb0pR/hvztEI92ljkPIgHn/XnENZVJOcXQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/Portfolio/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/Portfolio/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/Portfolio/js/main.bundle.min.941eff27287a099c02151ea4dd6935f65767d533fb8aa3dfb5c90d7586ff02bb5591211e1a0d01734a646e184dc2b7b3f7ca47b22f13af1e0d2ec265d2915cc7.js"
+      integrity="sha512-lB7/Jyh6CZwCFR6k3Wk19ldn1TP7iqPftckNdYb/ArtVkSEeGg0Bc0pkbhhNwrez98pHsi8Trx4NLsJl0pFcxw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/Portfolio/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/Portfolio/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Portfolio/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Portfolio/favicon-16x16.png">
+    <link rel="manifest" href="/Portfolio/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Devlogs",
+    "name": "Maintenance Log - Sixth Week",
+    "headline": "Maintenance Log - Sixth Week",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/Portfolio/devlog/maintenancelog-sixthweek/",
+    "author" : {
+      "@type": "Person",
+      "name": "Jesper Andersen"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-03-23T00:00:00\u002b00:00",
+    "datePublished": "2026-03-23T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-03-23T00:00:00\u002b00:00",
+    
+    "keywords": ["Devlog","Project","3Sem","MaintenanceLog","Backend","Security","JWT"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2570"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/Portfolio/" class="text-base font-medium truncate min-w-0 shrink">
+      Jesper Andersen - Blog &amp; DevLog
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/Portfolio/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/Portfolio/devlog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="DevLog"
+      title="Devlogs">
+      
+      
+        <span class="text-base font-medium break-normal">
+          DevLog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/Portfolio/aboutme/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About me">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/Portfolio/posts/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/Portfolio/devlog/"
+        aria-label="DevLog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Devlogs" class="text-2xl font-bold tracking-tight">
+          DevLog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/Portfolio/aboutme/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About me" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Maintenance Log - Sixth Week
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-03-23T00:00:00&#43;00:00">23 March 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2570 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/devlog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devlog
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/project/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Project
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/3sem/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    3Sem
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/maintenancelog/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    MaintenanceLog
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/backend/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Backend
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/security/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Security
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/Portfolio/tags/jwt/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    JWT
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Jesper Andersen"
+        src="/Portfolio/img/githubIcon_hu_4d02d22fadc56717.png"
+        data-zoom-src="/Portfolio/img/githubIcon_hu_ad0606c54dabe671.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Jesper Andersen
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:cph-ja472@stud.ek.dk"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/JesperTAndersen"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Maintenance Log -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part :
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-fifthweek/">
+          Part :
+          Maintenance Log - Fifth Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-fourthweek/">
+          Part :
+          Maintenance Log - Fourth Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-thirdweek/">
+          Part :
+          Maintenance Log - Third Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-secondweek/">
+          Part :
+          Maintenance Log - Second Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-firstweek/">
+          Part :
+          Maintenance Log - First Week
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Devlog Week 6: JWT Authentication &amp; Role-Based Authorization
+    <div id="devlog-week-6-jwt-authentication--role-based-authorization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#devlog-week-6-jwt-authentication--role-based-authorization" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>This week was entirely dedicated to building a deployment-ready authentication and authorization system. No new domain features—just securing everything that already exists. The focus was on JWT tokens, role hierarchies, and integrating security seamlessly into the existing architecture without breaking tests or existing functionality.</p>
+
+<h2 class="relative group">What Changed This Week
+    <div id="what-changed-this-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-changed-this-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><strong>Complete JWT authentication system</strong>: Login endpoint, token generation, token verification</li>
+<li><strong>Role-based authorization</strong>: ADMIN &gt; MANAGER &gt; TECHNICIAN &gt; AUTHENTICATED hierarchy</li>
+<li><strong>Security integration</strong>: <code>beforeMatched</code>/<code>afterMatched</code> hooks in Javalin request lifecycle</li>
+<li><strong>User → Employee refactoring</strong>: Renamed all user-related code to &ldquo;employee&rdquo; for clarity with library DTO naming</li>
+<li><strong>DTO conversion layer</strong>: Domain DTOs separated from library DTOs with explicit conversion</li>
+<li><strong>All routes protected</strong>: Role requirements on every endpoint except login</li>
+<li><strong>Test infrastructure updated</strong>: All tests now authenticate before making requests</li>
+</ul>
+<hr>
+
+<h2 class="relative group">The Security Layer Problem
+    <div id="the-security-layer-problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-security-layer-problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This week wasn&rsquo;t about learning JWT from scratch — our course uses a small helper library provided by our lecturer (<code>dk.bugelhartmann.TokenSecurity</code>) so issuing and validating tokens is pretty painless.</p>
+<p>The real work was fitting authentication + authorization into a codebase that already had a nice separation of concerns, <em>without</em> turning the whole project into &ldquo;security code everywhere&rdquo;.</p>
+<p><strong>What I needed to add (without wrecking anything):</strong> I already had a working REST API with controllers, services, DAOs, and a solid test suite. Now it needed to:</p>
+<ol>
+<li>Add authentication (who are you?)</li>
+<li>Add authorization (what can you do?)</li>
+<li>Keep existing behavior intact</li>
+<li>Update 100+ tests to include tokens</li>
+<li>Keep the architecture clean (no library DTOs leaking into controllers/services)</li>
+</ol>
+<p><strong>The constraint:</strong> The helper library has its own DTO shape (<code>dk.bugelhartmann.UserDTO</code>) while my domain uses <code>EmployeeDTO</code>. Bridging the two cleanly required a conversion layer so the rest of the application doesn&rsquo;t take a dependency on the library.</p>
+<hr>
+
+<h2 class="relative group">Authentication vs Authorization: The Javalin Lifecycle
+    <div id="authentication-vs-authorization-the-javalin-lifecycle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#authentication-vs-authorization-the-javalin-lifecycle" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Request flow</strong></p>
+<p>When a request hits the server, Javalin processes it in this order:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">1. beforeMatched handlers  ← Run BEFORE finding which route to use
+</span></span><span class="line"><span class="cl">2. Route matching          ← Javalin finds the endpoint
+</span></span><span class="line"><span class="cl">3. afterMatched handlers   ← Run AFTER route found, BEFORE controller
+</span></span><span class="line"><span class="cl">4. Endpoint handler        ← Your controller method
+</span></span><span class="line"><span class="cl">5. after handlers          ← Cleanup</span></span></code></pre></div></div>
+<p><strong>Why does this matter?</strong> Because authentication and authorization need different information, and Javalin only exposes some of it after routing.</p>
+<p><strong>Authentication (<code>beforeMatched</code>)</strong></p>
+<p><strong>Question:</strong> &ldquo;Is this token valid?&rdquo;</p>
+<p><strong>What it needs:</strong></p>
+<ul>
+<li>Token from <code>Authorization</code> header</li>
+<li>Secret key to verify signature</li>
+<li>Current timestamp to check expiration</li>
+</ul>
+<p><strong>What it doesn&rsquo;t need:</strong></p>
+<ul>
+<li>Which endpoint is being called</li>
+<li>What roles are required</li>
+<li>What the request body contains</li>
+</ul>
+<p><em>The one practical exception:</em> you still keep a tiny allowlist of open endpoints (like <code>POST /auth/login</code>) that should skip token checks.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">authenticate</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// OPTIONS requests (CORS preflight) skip authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="na">method</span><span class="p">().</span><span class="na">toString</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&#34;OPTIONS&#34;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ctx</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">200</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Open endpoints (e.g. login) skip authentication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isOpenEndpoint</span><span class="p">(</span><span class="n">ctx</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Extract and verify token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">UserDTO</span><span class="w"> </span><span class="n">verifiedTokenUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">validateAndGetUserFromToken</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ctx</span><span class="p">.</span><span class="na">attribute</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">verifiedTokenUser</span><span class="p">);</span><span class="w">  </span><span class="c1">// Store for authorize()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Why <code>beforeMatched</code>?</strong></p>
+<ul>
+<li>Token validation is the same regardless of which endpoint is being called</li>
+<li>If the token is invalid, reject immediately—don&rsquo;t waste time routing</li>
+<li>Fast fail principle: cheapest check first</li>
+</ul>
+<p><strong>Authorization (<code>afterMatched</code>)</strong></p>
+<p><strong>Question:</strong> &ldquo;Does this user have permission for THIS specific endpoint?&rdquo;</p>
+<p><strong>What it needs:</strong></p>
+<ul>
+<li>The user (from authentication)</li>
+<li><strong>The route&rsquo;s required roles</strong> (<code>ctx.routeRoles()</code>)</li>
+</ul>
+<p><strong>The catch:</strong> <code>ctx.routeRoles()</code> is <strong>only available after route matching</strong>. Before matching, Javalin doesn&rsquo;t even know which endpoint you&rsquo;re hitting.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">authorize</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">allowedRoles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">routeRoles</span><span class="p">()</span><span class="w">  </span><span class="c1">// ← Only exists after matching</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">stream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">role</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">role</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">toUpperCase</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isOpenEndpoint</span><span class="p">(</span><span class="n">allowedRoles</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">UserDTO</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">attribute</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Get user from authenticate()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ForbiddenResponse</span><span class="p">(</span><span class="s">&#34;No user was added from the token&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">userHasAllowedRole</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">allowedRoles</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ForbiddenResponse</span><span class="p">(</span><span class="s">&#34;Unauthorized&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Why <code>afterMatched</code>?</strong></p>
+<ul>
+<li>Needs <code>ctx.routeRoles()</code> which only exists post-matching</li>
+<li>Can make role-specific authorization decisions</li>
+<li>Still runs before the controller, so unauthorized requests never reach business logic</li>
+</ul>
+<p><strong>The pattern</strong></p>
+<p><strong>Authenticate</strong> (beforeMatched): &ldquo;Do I know who you are?&rdquo;<br>
+<strong>Authorize</strong> (afterMatched): &ldquo;Are you allowed to do this specific thing?&rdquo;</p>
+<p>Splitting these concerns into separate lifecycle hooks keeps the code clean and testable.</p>
+<hr>
+
+<h2 class="relative group">The DTO Conversion Challenge
+    <div id="the-dto-conversion-challenge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-dto-conversion-challenge" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Two DTOs, same job</strong></p>
+<p>The JWT library uses its own DTO:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// dk.bugelhartmann.UserDTO (library)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserDTO</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roles</span><span class="p">;</span><span class="w">  </span><span class="c1">// Multiple roles as strings</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>My domain has a different structure:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// app.dtos.EmployeeDTO (domain)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">record</span> <span class="nc">EmployeeDTO</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">phone</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w">              </span><span class="c1">// ← Not &#34;username&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">EmployeeRole</span><span class="w"> </span><span class="n">role</span><span class="p">,</span><span class="w">         </span><span class="c1">// ← Single enum, not Set&lt;String&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">active</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w"> </span><span class="p">{}</span></span></span></code></pre></div></div>
+<p><strong>The awkward bit:</strong> the token library works with <code>dk.bugelhartmann.UserDTO</code>, while the rest of my application speaks in <code>EmployeeDTO</code>. I didn&rsquo;t want the library DTO creeping into controller/service code just because security needs it.</p>
+<p><strong>Options I considered:</strong></p>
+<ol>
+<li>Use the library DTO throughout the app (easy, but it leaks a course helper into the domain)</li>
+<li>Fight the library and force everything to use my DTO (more work than it&rsquo;s worth)</li>
+<li>Keep them separate and convert at the boundary</li>
+</ol>
+<p>I went with option 3.</p>
+<p><strong>Conversion layer:</strong> created a single conversion method:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="n">dk</span><span class="p">.</span><span class="na">bugelhartmann</span><span class="p">.</span><span class="na">UserDTO</span><span class="w"> </span><span class="nf">convertToLibraryDTO</span><span class="p">(</span><span class="n">EmployeeDTO</span><span class="w"> </span><span class="n">employeeDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">dk</span><span class="p">.</span><span class="na">bugelhartmann</span><span class="p">.</span><span class="na">UserDTO</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">employeeDTO</span><span class="p">.</span><span class="na">email</span><span class="p">(),</span><span class="w">                </span><span class="c1">// Maps to username</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">employeeDTO</span><span class="p">.</span><span class="na">role</span><span class="p">().</span><span class="na">name</span><span class="p">())</span><span class="w">   </span><span class="c1">// Single role as Set&lt;String&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Used only when creating tokens:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">createToken</span><span class="p">(</span><span class="n">EmployeeDTO</span><span class="w"> </span><span class="n">employeeDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Convert domain DTO to library DTO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dk</span><span class="p">.</span><span class="na">bugelhartmann</span><span class="p">.</span><span class="na">UserDTO</span><span class="w"> </span><span class="n">libraryDTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">convertToLibraryDTO</span><span class="p">(</span><span class="n">employeeDTO</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Library creates token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tokenSecurity</span><span class="p">.</span><span class="na">createToken</span><span class="p">(</span><span class="n">libraryDTO</span><span class="p">,</span><span class="w"> </span><span class="n">ISSUER</span><span class="p">,</span><span class="w"> </span><span class="n">TOKEN_EXPIRE_TIME</span><span class="p">,</span><span class="w"> </span><span class="n">SECRET_KEY</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>For token verification</strong>, the library DTO stays internal:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="n">dk</span><span class="p">.</span><span class="na">bugelhartmann</span><span class="p">.</span><span class="na">UserDTO</span><span class="w"> </span><span class="nf">verifyToken</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tokenSecurity</span><span class="p">.</span><span class="na">tokenIsValid</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="w"> </span><span class="n">SECRET_KEY</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">tokenSecurity</span><span class="p">.</span><span class="na">tokenNotExpired</span><span class="p">(</span><span class="n">token</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">tokenSecurity</span><span class="p">.</span><span class="na">getUserWithRolesFromToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span><span class="w">  </span><span class="c1">// Returns library DTO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ApiException</span><span class="p">(</span><span class="n">403</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Token is not valid&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Result:</strong> Controllers and services never see the library DTO. It&rsquo;s purely an internal security layer concern.</p>
+<hr>
+
+<h2 class="relative group">Role Hierarchy Without Multiple Roles
+    <div id="role-hierarchy-without-multiple-roles" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#role-hierarchy-without-multiple-roles" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this system, each employee has <strong>exactly one role</strong>: ADMIN, MANAGER, or TECHNICIAN. But access control follows a hierarchy:</p>
+<ul>
+<li>ADMIN can do everything MANAGER and TECHNICIAN can do</li>
+<li>MANAGER can do everything TECHNICIAN can do</li>
+<li>TECHNICIAN can only do TECHNICIAN things</li>
+</ul>
+<p><strong>The constraint:</strong> the library supports <code>Set&lt;String&gt; roles</code>, but my domain model stores a single <code>EmployeeRole</code>. I didn&rsquo;t want to change the data model just to make the token shape happy.</p>
+<p>Instead of storing multiple roles anywhere, I just expand permissions at authorization time.</p>
+<p><strong>Store only the actual role in the token:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Token contains just the employee&#39;s real role</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">employeeDTO</span><span class="p">.</span><span class="na">role</span><span class="p">().</span><span class="na">name</span><span class="p">())</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="o">[</span><span class="s">&#34;ADMIN&#34;</span><span class="o">]</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">[</span><span class="s">&#34;MANAGER&#34;</span><span class="o">]</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">[</span><span class="s">&#34;TECHNICIAN&#34;</span><span class="o">]</span></span></span></code></pre></div></div>
+<p><strong>Expand the role during authorization:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ROLE_HIERARCHY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;ADMIN&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;ADMIN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">userHasAllowedRole</span><span class="p">(</span><span class="n">UserDTO</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">allowedRoles</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Get user&#39;s single role from token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userRole</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">getRoles</span><span class="p">().</span><span class="na">iterator</span><span class="p">().</span><span class="na">next</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Expand via hierarchy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">effectiveRoles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ROLE_HIERARCHY</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="n">userRole</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">userRole</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Check if any effective role matches required roles</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">effectiveRoles</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">anyMatch</span><span class="p">(</span><span class="n">role</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">allowedRoles</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">role</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Example flow:</strong></p>
+<p><strong>Employee logs in as ADMIN:</strong></p>
+<ul>
+<li>Token contains: <code>{username: &quot;admin@example.com&quot;, roles: [&quot;ADMIN&quot;]}</code></li>
+</ul>
+<p><strong>Request to <code>POST /assets</code> (requires MANAGER):</strong></p>
+<ol>
+<li><code>authenticate()</code> extracts user from token: roles = <code>[&quot;ADMIN&quot;]</code></li>
+<li><code>authorize()</code> gets required roles: <code>[&quot;MANAGER&quot;]</code></li>
+<li>Expands ADMIN via hierarchy: <code>[&quot;ADMIN&quot;, &quot;MANAGER&quot;, &quot;TECHNICIAN&quot;, &quot;AUTHENTICATED&quot;]</code></li>
+<li>Checks if expanded roles contain &ldquo;MANAGER&rdquo;: <strong>YES</strong></li>
+<li>Request proceeds</li>
+</ol>
+<p><strong>Net effect:</strong> one role in the database and token, but the permissions still behave like a hierarchy — and the logic lives in one place.</p>
+<hr>
+
+<h2 class="relative group">The AUTHENTICATED Role Pattern
+    <div id="the-authenticated-role-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-authenticated-role-pattern" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Some endpoints should be accessible to <strong>any logged-in user</strong>, regardless of role:</p>
+<ul>
+<li><code>GET /employees</code> — view employee directory</li>
+<li><code>GET /assets</code> — view asset list</li>
+<li><code>GET /logs</code> — view maintenance history</li>
+</ul>
+<p><strong>The problem:</strong> how do you express &ldquo;any logged-in user&rdquo; without copy-pasting three roles onto every route?</p>
+<p><strong>Bad approach:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">get</span><span class="p">(</span><span class="n">employeeController</span><span class="p">::</span><span class="n">getAll</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">ADMIN</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">MANAGER</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">TECHNICIAN</span><span class="p">);</span></span></span></code></pre></div></div>
+<p><strong>This is verbose and brittle</strong> — if you ever add a new role, you&rsquo;d have to hunt down every endpoint and update it.</p>
+<p>The fix was adding a special AUTHENTICATED role.</p>
+<p><strong>Added to enum:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">RouteRole</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">TECHNICIAN</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">MANAGER</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ADMIN</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">AUTHENTICATED</span><span class="w">  </span><span class="c1">// ← Special: &#34;any logged-in user&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Added to hierarchy:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ROLE_HIERARCHY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;ADMIN&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;ADMIN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;MANAGER&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&#34;TECHNICIAN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;AUTHENTICATED&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
+<p><strong>Used in routes:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">get</span><span class="p">(</span><span class="n">employeeController</span><span class="p">::</span><span class="n">getAll</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">AUTHENTICATED</span><span class="p">);</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Clean</span><span class="o">!</span></span></span></code></pre></div></div>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>AUTHENTICATED is in every role&rsquo;s effective permissions</li>
+<li>Any logged-in user satisfies the requirement</li>
+<li>But unauthenticated requests still get rejected (no token = no roles = fail)</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Consolidating Employee Creation
+    <div id="consolidating-employee-creation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#consolidating-employee-creation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before this week, there were two ways to create employees:</p>
+<ol>
+<li><code>POST /users</code> via <code>UserController</code> → <code>UserService.create()</code></li>
+<li>(Planned) <code>POST /auth/register</code> via <code>SecurityController</code> → <code>SecurityService.register()</code></li>
+</ol>
+<p><strong>The problem:</strong> duplicated logic. Both places would need to:</p>
+<ul>
+<li>Hash passwords</li>
+<li>Check for duplicate emails</li>
+<li>Set default values (<code>active = true</code>)</li>
+<li>Create the employee entity</li>
+<li>Return a DTO</li>
+</ul>
+<p>So I consolidated it.</p>
+<p><strong>Removed:</strong></p>
+<ul>
+<li><code>EmployeeService.create()</code> method</li>
+<li><code>POST /employees</code> endpoint</li>
+<li><code>EmployeeController.create()</code> method</li>
+</ul>
+<p><strong>Consolidated into:</strong></p>
+<ul>
+<li><code>SecurityService.register()</code> — <strong>only way</strong> to create employees</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="n">EmployeeDTO</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">CreateEmployeeRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Check duplicate email</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">secDAO</span><span class="p">.</span><span class="na">getByEmail</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">email</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ApiException</span><span class="p">(</span><span class="n">409</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Email already exists&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Create employee with hashed password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">employee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Employee</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">firstName</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">firstName</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">lastName</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">lastName</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">email</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">email</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">phone</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">phone</span><span class="p">())</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">role</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">role</span><span class="p">())</span><span class="w">  </span><span class="c1">// Admin can specify any role</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">password</span><span class="p">(</span><span class="n">hashPassword</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">password</span><span class="p">()))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">active</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">created</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">secDAO</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">employee</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EmployeeMapper</span><span class="p">.</span><span class="na">toDTO</span><span class="p">(</span><span class="n">created</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Protected the endpoint:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">post</span><span class="p">(</span><span class="s">&#34;/register&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">securityController</span><span class="p">::</span><span class="n">register</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">MANAGER</span><span class="p">);</span></span></span></code></pre></div></div>
+<p><strong>Result:</strong></p>
+<ul>
+<li>One source of truth for employee creation</li>
+<li>No duplicate password hashing logic</li>
+<li>Security service owns security-related operations (which is where it belongs)</li>
+<li>Managers/admins can create employees; technicians cannot</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Testing with Authentication
+    <div id="testing-with-authentication" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#testing-with-authentication" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Once endpoints require tokens, any test that forgets the header gets an instant 403:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Before (worked last week)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&#34;/assets&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">200</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// After (fails with 403)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&#34;/assets&#34;</span><span class="p">)</span><span class="w">  </span><span class="c1">// ← No token!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">200</span><span class="p">);</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Gets</span><span class="w"> </span><span class="n">403</span><span class="w"> </span><span class="n">instead</span></span></span></code></pre></div></div>
+<p>So the test setup now logs in first.</p>
+<p><strong>Updated <code>TestPopulator</code> to include passwords:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Employee</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">populateEmployees</span><span class="p">(</span><span class="n">EntityManagerFactory</span><span class="w"> </span><span class="n">emf</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">hashedPassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecurityServiceImpl</span><span class="p">.</span><span class="na">hashPassword</span><span class="p">(</span><span class="s">&#34;password123&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">employee1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Employee</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">email</span><span class="p">(</span><span class="s">&#34;Johndoe@mail.dk&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">password</span><span class="p">(</span><span class="n">hashedPassword</span><span class="p">)</span><span class="w">  </span><span class="c1">// ← Added!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">role</span><span class="p">(</span><span class="n">EmployeeRole</span><span class="p">.</span><span class="na">TECHNICIAN</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">active</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... more employees</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Login in test setup:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">authenticatedToken</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">managerToken</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">adminToken</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@BeforeEach</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">employees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TestPopulator</span><span class="p">.</span><span class="na">populateEmployees</span><span class="p">(</span><span class="n">emf</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TestPopulator</span><span class="p">.</span><span class="na">populateAssets</span><span class="p">(</span><span class="n">emf</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Get tokens for each role</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">authenticatedToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loginAsEmployee</span><span class="p">(</span><span class="s">&#34;Johndoe@mail.dk&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;password123&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">managerToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loginAsEmployee</span><span class="p">(</span><span class="s">&#34;Janedoe@mail.dk&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;password123&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">adminToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loginAsEmployee</span><span class="p">(</span><span class="s">&#34;Jeffdoe@mail.dk&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;password123&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">loginAsEmployee</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">contentType</span><span class="p">(</span><span class="s">&#34;application/json&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">body</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">            {
+</span></span></span><span class="line"><span class="cl"><span class="s">                &#34;email&#34;: &#34;%s&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s">                &#34;password&#34;: &#34;%s&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">            }
+</span></span></span><span class="line"><span class="cl"><span class="s">            &#34;&#34;&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="s">&#34;/auth/login&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">200</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">extract</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">path</span><span class="p">(</span><span class="s">&#34;token&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Use in tests:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">testGetAllActiveAssets</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&#34;Authorization&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Bearer &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">authenticatedToken</span><span class="p">)</span><span class="w">  </span><span class="c1">// ← Add token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&#34;/assets?active=true&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">200</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Testing authorization</strong></p>
+<p>Once I had tokens for each role, testing authorization became pretty straightforward:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">testPostAssetAsManager</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&#34;Authorization&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Bearer &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">managerToken</span><span class="p">)</span><span class="w">  </span><span class="c1">// ← Manager token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">contentType</span><span class="p">(</span><span class="s">&#34;application/json&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">body</span><span class="p">(</span><span class="s">&#34;&#34;&#34;{&#34;</span><span class="n">name</span><span class="s">&#34;: &#34;</span><span class="n">New</span><span class="w"> </span><span class="n">Machine</span><span class="s">&#34;, &#34;</span><span class="n">active</span><span class="s">&#34;: true}&#34;&#34;&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="s">&#34;/assets&#34;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Requires MANAGER</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">201</span><span class="p">);</span><span class="w">  </span><span class="c1">// Success</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">testPostAssetAsTechnicianFails</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">given</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&#34;Authorization&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Bearer &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">authenticatedToken</span><span class="p">)</span><span class="w">  </span><span class="c1">// ← Technician token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">contentType</span><span class="p">(</span><span class="s">&#34;application/json&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">body</span><span class="p">(</span><span class="s">&#34;&#34;&#34;{&#34;</span><span class="n">name</span><span class="s">&#34;: &#34;</span><span class="n">Should</span><span class="w"> </span><span class="n">Fail</span><span class="s">&#34;, &#34;</span><span class="n">active</span><span class="s">&#34;: true}&#34;&#34;&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">when</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="s">&#34;/assets&#34;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Requires MANAGER</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">then</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">statusCode</span><span class="p">(</span><span class="n">403</span><span class="p">);</span><span class="w">  </span><span class="c1">// Forbidden</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Result:</strong> all the existing tests were easy to update systematically, and it gave me confidence that the security rules were actually enforced end-to-end.</p>
+<hr>
+
+<h2 class="relative group">The User → Employee Refactoring
+    <div id="the-user--employee-refactoring" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-user--employee-refactoring" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the library using <code>dk.bugelhartmann.UserDTO</code> and my domain talking about users too, it got confusing fast. In code reviews it was always: &ldquo;wait — which <code>UserDTO</code> is this?&rdquo;</p>
+<p><strong>The confusion:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">dk.bugelhartmann.UserDTO</span><span class="p">;</span><span class="w">  </span><span class="c1">// Library</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">app.dtos.UserDTO</span><span class="p">;</span><span class="w">           </span><span class="c1">// Domain - COMPILE ERROR!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Now what?</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">UserDTO</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Which</span><span class="w"> </span><span class="n">one</span><span class="o">?!</span></span></span></code></pre></div></div>
+<p><strong>The fix:</strong> rename my domain entities to <code>Employee</code>.</p>
+<p><strong>Renamed:</strong></p>
+<ul>
+<li><code>User</code> → <code>Employee</code></li>
+<li><code>UserDTO</code> → <code>EmployeeDTO</code></li>
+<li><code>CreateUserRequest</code> → <code>CreateEmployeeRequest</code></li>
+<li><code>UserService</code> → <code>EmployeeService</code></li>
+<li><code>UserController</code> → <code>EmployeeController</code></li>
+<li><code>UserDAO</code> → <code>EmployeeDAO</code></li>
+<li>All tests, all routes, all references</li>
+</ul>
+<p><strong>Result:</strong> much clearer intent. <code>UserDTO</code> is the library token DTO, <code>EmployeeDTO</code> is my domain DTO.</p>
+<hr>
+
+<h2 class="relative group">Access Control Matrix
+    <div id="access-control-matrix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#access-control-matrix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Here&rsquo;s the permission structure I ended up with:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Endpoint</th>
+          <th>Role Required</th>
+          <th>Who Can Access</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Authentication</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>POST /auth/login</code></td>
+          <td>None</td>
+          <td>Anyone</td>
+      </tr>
+      <tr>
+          <td><code>POST /auth/register</code></td>
+          <td><code>MANAGER</code></td>
+          <td>Manager, Admin</td>
+      </tr>
+      <tr>
+          <td><strong>Employees</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>GET /employees</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>GET /employees/{id}</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>PUT /employees/{id}</code></td>
+          <td><code>MANAGER</code></td>
+          <td>Manager, Admin</td>
+      </tr>
+      <tr>
+          <td><code>DELETE /employees/{id}</code></td>
+          <td><code>ADMIN</code></td>
+          <td>Admin only</td>
+      </tr>
+      <tr>
+          <td><code>PATCH /employees/{id}</code></td>
+          <td><code>ADMIN</code></td>
+          <td>Admin only</td>
+      </tr>
+      <tr>
+          <td><strong>Assets</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>GET /assets</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>GET /assets/{id}</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>POST /assets</code></td>
+          <td><code>MANAGER</code></td>
+          <td>Manager, Admin</td>
+      </tr>
+      <tr>
+          <td><code>PATCH /assets/{id}</code></td>
+          <td><code>MANAGER</code></td>
+          <td>Manager, Admin</td>
+      </tr>
+      <tr>
+          <td><code>DELETE /assets/{id}</code></td>
+          <td><code>ADMIN</code></td>
+          <td>Admin only</td>
+      </tr>
+      <tr>
+          <td><strong>Logs (nested)</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>GET /assets/{id}/logs</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>POST /assets/{id}/logs</code></td>
+          <td><code>TECHNICIAN</code></td>
+          <td>Technician, Manager, Admin</td>
+      </tr>
+      <tr>
+          <td><strong>Logs (standalone)</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>GET /logs</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>GET /logs/{id}</code></td>
+          <td><code>AUTHENTICATED</code></td>
+          <td>All logged-in users</td>
+      </tr>
+      <tr>
+          <td><code>GET /logs/employee/{id}</code></td>
+          <td><code>MANAGER</code></td>
+          <td>Manager, Admin</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>The pattern:</strong> Read access for authenticated users, write access for appropriate roles, destructive actions for admins only.</p>
+<hr>
+
+<h2 class="relative group">Design Decisions This Week
+    <div id="design-decisions-this-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#design-decisions-this-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>47. JWT Authentication via Lecturer-Provided Helper Library</strong> — Used <code>dk.bugelhartmann.TokenSecurity</code> for token generation/verification; conversion layer isolates library DTO from domain</p>
+<p><strong>48. Security Service Owns Employee Creation</strong> — Consolidated all employee creation through <code>/auth/register</code>; removed <code>EmployeeService.create()</code> to avoid duplication</p>
+<p><strong>49. beforeMatched for Authentication</strong> — Token validation runs before route matching; doesn&rsquo;t need to know endpoint requirements</p>
+<p><strong>50. afterMatched for Authorization</strong> — Role checking runs after route matching; requires <code>ctx.routeRoles()</code> which is only available post-match</p>
+<p><strong>51. Library DTO Internal to Security Layer</strong> — <code>dk.bugelhartmann.UserDTO</code> used only for token operations; never exposed to controllers or returned in responses</p>
+<p><strong>52. Domain DTO for All External Communication</strong> — <code>EmployeeDTO</code> used in controller responses and service layer; clean separation from library implementation details</p>
+<p><strong>53. Conversion Method Pattern</strong> — <code>convertToLibraryDTO()</code> handles mapping between domain and library DTOs; single responsibility, easy to test</p>
+<p><strong>54. Role Hierarchy via Map</strong> — Static map defines role inheritance; expanded during authorization check rather than storing multiple roles in token</p>
+<p><strong>55. Single Role per Employee</strong> — Database stores one <code>EmployeeRole</code> enum; hierarchy expansion happens at authorization time, not in data model</p>
+<p><strong>56. AUTHENTICATED Role for Any Logged-In User</strong> — Special role that all roles inherit; enables &ldquo;authenticated but any role&rdquo; endpoints without listing all roles</p>
+<p><strong>57. Open Endpoints Have No Roles</strong> — Absence of roles = open endpoint; explicit rather than special marker role</p>
+<p><strong>58. Soft Delete for Employees</strong> — Inactive employees can&rsquo;t login (checked in <code>login()</code>); preserved in database for historical maintenance log references</p>
+<p><strong>59. Login Returns Token + User</strong> — Client gets both JWT token and user details in single response; avoids extra request to fetch user data</p>
+<p><strong>60. Password Hashing with BCrypt</strong> — Static <code>hashPassword()</code> method (salt factor 12); reused in service and test seeding</p>
+<p><strong>61. Test Tokens Per Role</strong> — Each test class maintains tokens for TECHNICIAN, MANAGER, ADMIN; enables comprehensive role-based testing</p>
+<p><strong>62. Seeded Test Employees with Known Passwords</strong> — <code>TestPopulator</code> creates employees with <code>password123</code>; enables login during test setup</p>
+<hr>
+
+<h2 class="relative group">Thoughts on Security Implementation
+    <div id="thoughts-on-security-implementation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-on-security-implementation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I expected adding auth to be one of those &ldquo;touch everything, break everything&rdquo; weeks, but it honestly went smoother than I thought — mostly because the structure was already doing its job. Having clear layers (routes → controllers → services → DAOs) meant I could bolt security on at the edges instead of sprinkling checks throughout business logic.</p>
+<p>The biggest &ldquo;cost&rdquo; wasn&rsquo;t getting it to work, it was making it feel <em>clean</em>: keeping authentication separate from authorization, keeping the lecturer-provided token types inside the security layer, and getting the role rules readable instead of turning every route into a list of three roles.</p>
+<p>The <code>beforeMatched</code>/<code>afterMatched</code> split was the main mental hurdle. Once it clicked that route roles only exist after matching, the design stopped feeling like ceremony and started feeling like the request lifecycle doing me a favor.</p>
+<p>And yes — updating the tests was a lot of mechanical work, but it also felt like a good sign: if adding tokens to tests is mostly systematic, the API surface is probably consistent.</p>
+
+<h2 class="relative group">Next Week
+    <div id="next-week" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#next-week" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Building out the deployment pipeline. The core functionality is solid; time to harden it and prepare for production.</p>
+
+          
+          
+          
+        </div>
+        
+        
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Maintenance Log -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part :
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-fifthweek/">
+          Part :
+          Maintenance Log - Fifth Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-fourthweek/">
+          Part :
+          Maintenance Log - Fourth Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-thirdweek/">
+          Part :
+          Maintenance Log - Third Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-secondweek/">
+          Part :
+          Maintenance Log - Second Week
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/Portfolio/devlog/maintenancelog-firstweek/">
+          Part :
+          Maintenance Log - First Week
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/Portfolio/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_devlog\maintenancelog-sixthweek.md"
+          data-oid-likes="likes_devlog\maintenancelog-sixthweek.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/Portfolio/devlog/maintenancelog-fifthweek/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Maintenance Log - Fifth Week
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-03-16T00:00:00&#43;00:00">16 March 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Jesper Andersen
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/Portfolio/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/Portfolio/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
