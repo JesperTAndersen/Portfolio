@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>http://localhost:1313/Portfolio/tags/architecture/</link>
+    <link>https://jespertandersen.github.io/Portfolio/tags/architecture/</link>
     <description>Recent content in Architecture on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jespertandersen.github.io/Portfolio/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Maintenance Log - Fifth Week</title>
-      <link>http://localhost:1313/Portfolio/devlog/maintenancelog-fifthweek/</link>
+      <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-fifthweek/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/devlog/maintenancelog-fifthweek/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-fifthweek/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;Devlog Week 5: Interface Refinement, REST API Testing &amp;amp; The Mapper Pattern&#xD;&#xA;    &lt;div id=&#34;devlog-week-5-interface-refinement-rest-api-testing--the-mapper-pattern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#devlog-week-5-interface-refinement-rest-api-testing--the-mapper-pattern&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;This week marked a significant shift from building features to refining architecture and establishing a robust testing foundation. The focus was on three major areas: granular interface design following ISP principles, comprehensive REST API testing with RestAssured, and implementing the DTO mapper pattern.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Maintenance Log - First Week</title>
-      <link>http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/</link>
+      <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-firstweek/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>http://localhost:1313/Portfolio/devlog/maintenancelog-firstweek/</guid>
+      <guid>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-firstweek/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;Devlog Week 1: Project Kickoff &amp;amp; Scope&#xD;&#xA;    &lt;div id=&#34;devlog-week-1-project-kickoff--scope&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#devlog-week-1-project-kickoff--scope&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;So, first of all, welcome to this first week post of the development of my little maintenance log. Just for posterity, let&amp;rsquo;s start with what is in my README for the project, since that actually breaks down what it is:&lt;/p&gt;</description>
       
     </item>

@@ -13,5 +13,10 @@ name = "About"
 pageref = "aboutme.md"
 weight = 30
 
+[[main]]
+name = "Exam Portfolio"
+url = "/tags/exam-portfolio/"
+weight = 40
+
 [[footer]]
 none = "none"

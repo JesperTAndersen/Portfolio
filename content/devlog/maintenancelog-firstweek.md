@@ -1,6 +1,6 @@
 ---
 title: "Maintenance Log - First Week"
-tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Architecture"]
+tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Architecture", "exam-portfolio"]
 series: ["Maintenance Log"]
 date: 2026-02-06
 draft: false

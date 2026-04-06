@@ -4,13 +4,19 @@
 
   <url>
     <loc>https://jespertandersen.github.io/Portfolio/devlog/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jespertandersen.github.io/Portfolio/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-seventhweek/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
