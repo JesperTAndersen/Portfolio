@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - Second Week"
+title: "Maintenance Log - Second Week: Relations, DAOs & Exception Handling"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Persistence", "DAO", "Hibernate", "JPA"]
 series: ["Maintenance Log"]
 date: 2026-02-13

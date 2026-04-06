@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - Sixth Week"
+title: "Maintenance Log - Sixth Week: JWT Authentication & Role-Based Authorization"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Security", "JWT", "exam-portfolio"]
 series: ["Maintenance Log"]
 date: 2026-03-23

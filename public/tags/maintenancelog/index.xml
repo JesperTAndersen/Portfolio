@@ -12,7 +12,7 @@
     <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jespertandersen.github.io/Portfolio/tags/maintenancelog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Maintenance Log - Seventh Week</title>
+      <title>Maintenance Log - Seventh Week: Deployment, CI/CD &amp; Running It For Real</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-seventhweek/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - Sixth Week</title>
+      <title>Maintenance Log - Sixth Week: JWT Authentication &amp; Role-Based Authorization</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-sixthweek/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -32,7 +32,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - Fifth Week</title>
+      <title>Maintenance Log - Fifth Week: Interface Refinement, REST API Testing &amp; The Mapper Pattern</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-fifthweek/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -42,7 +42,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - Fourth Week</title>
+      <title>Maintenance Log - Fourth Week: Building a Production-Style REST API</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-fourthweek/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -52,7 +52,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - Third Week</title>
+      <title>Maintenance Log - Third Week: External API Integration &amp; Concurrent Processing</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-thirdweek/</link>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - Second Week</title>
+      <title>Maintenance Log - Second Week: Relations, DAOs &amp; Exception Handling</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-secondweek/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
@@ -72,7 +72,7 @@
     </item>
     
     <item>
-      <title>Maintenance Log - First Week</title>
+      <title>Maintenance Log - First Week: Project Kickoff &amp; Scope</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-firstweek/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>

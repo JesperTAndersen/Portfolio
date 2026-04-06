@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - First Week"
+title: "Maintenance Log - First Week: Project Kickoff & Scope"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Architecture", "exam-portfolio"]
 series: ["Maintenance Log"]
 date: 2026-02-06

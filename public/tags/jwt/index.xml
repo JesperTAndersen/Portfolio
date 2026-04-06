@@ -12,7 +12,7 @@
     <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jespertandersen.github.io/Portfolio/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Maintenance Log - Sixth Week</title>
+      <title>Maintenance Log - Sixth Week: JWT Authentication &amp; Role-Based Authorization</title>
       <link>https://jespertandersen.github.io/Portfolio/devlog/maintenancelog-sixthweek/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>

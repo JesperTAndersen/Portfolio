@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - Fourth Week"
+title: "Maintenance Log - Fourth Week: Building a Production-Style REST API"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "REST", "Javalin", "Logging", "Validation"]
 series: ["Maintenance Log"]
 date: 2026-03-09

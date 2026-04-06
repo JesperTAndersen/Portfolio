@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - Seventh Week"
+title: "Maintenance Log - Seventh Week: Deployment, CI/CD & Running It For Real"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "Backend", "Deployment", "DevOps", "Docker", "CI/CD", "GitHubActions"]
 series: ["Maintenance Log"]
 date: 2026-03-29

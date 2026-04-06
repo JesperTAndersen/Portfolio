@@ -1,5 +1,5 @@
 ---
-title: "Maintenance Log - Third Week"
+title: "Maintenance Log - Third Week: External API Integration & Concurrent Processing"
 tags: ["Devlog", "Project", "3Sem", "MaintenanceLog", "API", "ExternalAPI", "Concurrency", "Seeding"]
 series: ["Maintenance Log"]
 date: 2026-02-26
