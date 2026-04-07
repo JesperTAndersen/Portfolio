@@ -2,311 +2,311 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jesper Andersen - Blog &amp; DevLog</title>
-    <link>https://jespertandersen.github.io/Portfolio/tags/</link>
+    <link>http://localhost:1313/Portfolio/tags/</link>
     <description>Recent content in Tags on Jesper Andersen - Blog &amp; DevLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>cph-ja472@stud.ek.dk (Jesper Andersen)</managingEditor>
     <webMaster>cph-ja472@stud.ek.dk (Jesper Andersen)</webMaster>
     <copyright>© 2026 Jesper Andersen</copyright>
-    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jespertandersen.github.io/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>3Sem</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/3sem/</link>
+      <link>http://localhost:1313/Portfolio/tags/3sem/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/3sem/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/3sem/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Backend</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/backend/</link>
+      <link>http://localhost:1313/Portfolio/tags/backend/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/backend/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/backend/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CI/CD</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/ci/cd/</link>
+      <link>http://localhost:1313/Portfolio/tags/ci/cd/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/ci/cd/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/ci/cd/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/deployment/</link>
+      <link>http://localhost:1313/Portfolio/tags/deployment/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/deployment/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/deployment/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Devlog</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/devlog/</link>
+      <link>http://localhost:1313/Portfolio/tags/devlog/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/devlog/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/devlog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/devops/</link>
+      <link>http://localhost:1313/Portfolio/tags/devops/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/devops/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/devops/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/docker/</link>
+      <link>http://localhost:1313/Portfolio/tags/docker/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/docker/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>GitHubActions</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/githubactions/</link>
+      <link>http://localhost:1313/Portfolio/tags/githubactions/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/githubactions/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/githubactions/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>MaintenanceLog</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/maintenancelog/</link>
+      <link>http://localhost:1313/Portfolio/tags/maintenancelog/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/maintenancelog/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/maintenancelog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Project</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/project/</link>
+      <link>http://localhost:1313/Portfolio/tags/project/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/project/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/project/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Exam Portfolio</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/exam-portfolio/</link>
+      <link>http://localhost:1313/Portfolio/tags/exam-portfolio/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/exam-portfolio/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/exam-portfolio/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Links&#xD;&#xA;    &lt;div id=&#34;links&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#links&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Code repository:&lt;/strong&gt; &lt;a href=&#34;https://github.com/JesperTAndersen/MaintenanceLog&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;MaintenanceLog (GitHub)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hand-in video:&lt;/strong&gt; &lt;em&gt;(TODO)&lt;/em&gt; Add link when recorded&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What this page is&#xD;&#xA;    &lt;div id=&#34;what-this-page-is&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;span&#xD;&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xD;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-this-page-is&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xD;&#xA;    &lt;/span&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;This page contains the specific devlog posts from my portfolio that I want to include in the exam. The goal is to show the development of my application over time, including what I built, what I learned, and the technical decisions I made along the way.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>JWT</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/jwt/</link>
+      <link>http://localhost:1313/Portfolio/tags/jwt/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/jwt/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/jwt/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Security</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/security/</link>
+      <link>http://localhost:1313/Portfolio/tags/security/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/security/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/security/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Architecture</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/architecture/</link>
+      <link>http://localhost:1313/Portfolio/tags/architecture/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/architecture/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/architecture/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Testing</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/testing/</link>
+      <link>http://localhost:1313/Portfolio/tags/testing/</link>
       <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/testing/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/testing/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Javalin</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/javalin/</link>
+      <link>http://localhost:1313/Portfolio/tags/javalin/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/javalin/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/javalin/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Logging</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/logging/</link>
+      <link>http://localhost:1313/Portfolio/tags/logging/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/logging/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/logging/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>REST</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/rest/</link>
+      <link>http://localhost:1313/Portfolio/tags/rest/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/rest/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/rest/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Validation</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/validation/</link>
+      <link>http://localhost:1313/Portfolio/tags/validation/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/validation/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/validation/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>API</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/api/</link>
+      <link>http://localhost:1313/Portfolio/tags/api/</link>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/api/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/api/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Concurrency</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/concurrency/</link>
+      <link>http://localhost:1313/Portfolio/tags/concurrency/</link>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/concurrency/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/concurrency/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>ExternalAPI</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/externalapi/</link>
+      <link>http://localhost:1313/Portfolio/tags/externalapi/</link>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/externalapi/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/externalapi/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Seeding</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/seeding/</link>
+      <link>http://localhost:1313/Portfolio/tags/seeding/</link>
       <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/seeding/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/seeding/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>DAO</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/dao/</link>
+      <link>http://localhost:1313/Portfolio/tags/dao/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/dao/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/dao/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Hibernate</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/hibernate/</link>
+      <link>http://localhost:1313/Portfolio/tags/hibernate/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/hibernate/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/hibernate/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>JPA</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/jpa/</link>
+      <link>http://localhost:1313/Portfolio/tags/jpa/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/jpa/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/jpa/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Persistence</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/persistence/</link>
+      <link>http://localhost:1313/Portfolio/tags/persistence/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/persistence/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/persistence/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>AI</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/ai/</link>
+      <link>http://localhost:1313/Portfolio/tags/ai/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/ai/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/ai/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/blog/</link>
+      <link>http://localhost:1313/Portfolio/tags/blog/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/blog/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/blog/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>FirstPost</title>
-      <link>https://jespertandersen.github.io/Portfolio/tags/firstpost/</link>
+      <link>http://localhost:1313/Portfolio/tags/firstpost/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>cph-ja472@stud.ek.dk (Jesper Andersen)</author>
-      <guid>https://jespertandersen.github.io/Portfolio/tags/firstpost/</guid>
+      <guid>http://localhost:1313/Portfolio/tags/firstpost/</guid>
       <description></description>
       
     </item>

@@ -7,7 +7,7 @@ draft: false
 ## Links
 
 - **Code repository:** [MaintenanceLog (GitHub)](https://github.com/JesperTAndersen/MaintenanceLog)
-- **Hand-in video:** *(TODO)* Add link when recorded
+- **Hand-in video:** [Video (Youtube)](https://www.youtube.com/watch?v=kXl-42g5mtk)
 
 ## What this page is
 
