@@ -164,3 +164,11 @@ App
   alt="Asset list (v1)"
   caption="Asset list (v1)"
   >}}
+
+---
+
+## Up Next
+
+- Add auth state + token rehydration (context + `getMe()`)
+- Protect routes by role (nestable route guards)
+- Replace mock assets with real API fetch + filtering
